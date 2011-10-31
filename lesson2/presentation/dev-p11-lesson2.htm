@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<title>Занятие 2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="../../../shower/themes/ribbon/styles/style.css">
+	<style>
+		#Cover H2 {
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Занятие 2</h1>
+		<p>Создание циклов. Функции</p>
+	</header>
+	<div class="slide bg" id="Cover"><div>
+		<section>
+			<header>
+                <h2>Создание циклов. Функции</h2>
+			</header>
+            <img src="../../../shower/pictures/cover.jpg" alt="">
+			<!-- © John Carey, http://fiftyfootshadows.net/ -->
+		</section>
+	</div></div>
+	<div class="slide" id="slide2"><div>
+		<section>
+			<header>
+				<h2>Операторы сравения</h2>
+			</header>
+            <ol>
+                <li>a == b</li>
+                <li>a === b</li>
+                <li>a != b</li>
+                <li>a !== b</li>
+            </ol>
+		</section>
+	</div></div>
+    <div class="slide" id="slide3">
+        <div>
+            <section>
+                <header>
+                    <h2>Операторы сравнения</h2>
+                </header>
+                <ol>
+                    <li>a > b</li>
+                    <li>a < b</li>
+                    <li>a >= b</li>
+                    <li>a <= b</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide4">
+        <div>
+            <section>
+                <header>
+                    <h2>Логические операторы</h2>
+                </header>
+                <ol>
+                    <li>a && b</li>
+                    <li>a || b</li>
+                    <li>!a</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide5">
+        <div>
+            <section>
+                <header>
+                    <h2>Логическое И (&&)</h2>
+                </header>
+                <p>Возвращает <strong>true</strong>, если <code>и</code> левое, <code>и</code> правое значения возвращают true</p>
+                <ul>
+                    <li>var a = 1, b =0; c = a && b; <code>// c = false</code></li>
+                    <li>var a = 0, b =1; c = a && b; <code>// c = false</code></li>
+                    <li>var a = 1, b =1; c = a && b; <code>// c = true</code></li>
+                    <li>var a = 0, b =0; c = a && b; <code>// c = false</code></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide6">
+        <div>
+            <section>
+                <header>
+                    <h2>Логическое ИЛИ (||)</h2>
+                </header>
+                <p>Возвращает <strong>true</strong>, если <code>или</code> левое, <code>или</code> правое значения возвращают <strong>true</strong></p>
+                <ul>
+                    <li>var a = 1, b =0; c = a || b; <code>// c = true</code></li>
+                    <li>var a = 0, b =1; c = a || b; <code>// c = true</code></li>
+                    <li>var a = 1, b =1; c = a || b; <code>// c = true</code></li>
+                    <li>var a = 0, b =0; c = a || b; <code>// c = false</code></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide7">
+        <div>
+            <section>
+                <header>
+                    <h2>Логическое НЕТ (!var)</h2>
+                </header>
+                <p>Возвращает <code>true</code>, если операнд ложен</p>
+                <ul>
+                    <li>var a = 1; c = !a; <code>// c = false</code></li>
+                    <li>var a = 0; c = !a; <code>// c = true</code></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide8">
+        <div>
+            <section>
+                <header>
+                    <h2>Типы данных</h2>
+                </header>
+                <p>Элементарные (простые) типы данных</p>
+                <ol>
+                    <li><strong>string</strong> - строка</li>
+                    <li><strong>number</strong> - число</li>
+                    <li><strong>boolean</strong> - логическое</li>
+                    <li><strong>null</strong> - null</li>
+                    <li><strong>undefined</strong> - значение отсутствует</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide9">
+        <div>
+            <section>
+                <header>
+                    <h2>Приведение типов к boolean</h2>
+                </header>
+                <ul>
+                    <li><strong>Number</strong>. <code>0</code> – false, остальные – true</li>
+                    <li><strong>String</strong>. <code>""</code> – false, остальные – true</li>
+                    <li><strong>null</strong>, <strong>undefined</strong> – всегда false</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide10">
+        <div>
+            <section>
+                <header>
+                    <h2>Объекты</h2>
+                </header>
+                <p><strong>Объект</strong> - основной тип данных в JavaScript.</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide11">
+        <div>
+            <section>
+                <header>
+                    <h2>В JS всё – объект</h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide12">
+        <div>
+            <section>
+                <header>
+                    <h2>Строка — объект</h2>
+                </header>
+                <ul>
+                    <li><em>alert</em> (typeof ("0"));</li>
+                    <li><em>alert</em> (typeof (String("0")));</li>
+                    <li><em>alert</em> (typeof (<code>new</code> String("0")));</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide13">
+        <div>
+            <section>
+                <header>
+                    <h2>Исключения</h2>
+                </header>
+                <p>Undefined – не объект</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide14">
+        <div>
+            <section>
+                <header>
+                    <h2>Eval</h2>
+                </header>
+                <p>eval() возвращает результат вычисления переданной строки, как JS-кода.</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide15">
+        <div>
+            <section>
+                <header>
+                    <h2>Eval не<br />безопасен!</h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide16">
+        <div>
+            <section>
+                <header>
+                    <h2>Задания 3-9<br />на стр. 4</h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide17">
+        <div>
+            <section>
+                <header>
+                    <h2>Условные операторы и циклы</h2>
+                </header>
+                <p>Выполнение кода в зависимости от выполнения логических условий</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide18">
+        <div>
+            <section>
+                <header>
+                    <h2>Условные операторы и циклы</h2>
+                </header>
+                <ul>
+                    <li><code>if .. else .. elseif</code> - если</li>
+                    <li><code>do .. while</code> – делать пока...</li>
+                    <li><code>for</code> – делать пока выполняется условие цикла</li>
+                    <li><code>switch</code> – если с другим синтаксисом</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide19">
+        <div>
+            <section>
+                <header>
+                    <h2>Операторы if .. else .. elseif</h2>
+                </header>
+                <pre>
+                    <code>if (<mark>condition</mark>) {</code>
+                    <code>    JS code</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide20">
+        <div>
+            <section>
+                <header>
+                    <h2>Операторы if .. else .. elseif</h2>
+                </header>
+                <pre>
+                    <code>if (<mark>condition</mark>) {</code>
+                    <code>    JS code</code>
+                    <code>} else {</code>
+                    <code>    JS code</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide21">
+        <div>
+            <section>
+                <header>
+                    <h2>Операторы if .. else .. elseif</h2>
+                </header>
+                <pre>
+                    <code>if (<mark>condition</mark>) {</code>
+                    <code>    JS code</code>
+                    <code>} elseif (<mark>condition</mark>) {</code>
+                    <code>    JS code</code>
+                    <code>} else {</code>
+                    <code>    JS code</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide22">
+        <div>
+            <section>
+                <pre>
+                    <code>if (a == 0) {</code>
+                    <code>    JS code</code>
+                    <code>} else  if (a == 1) {</code>
+                    <code>    JS code</code>
+                    <code>} elseif (a == 2) {</code>
+                    <code>    JS code</code>
+                    <code>} else {</code>
+                    <code>    JS code</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide23">
+        <div>
+            <section>
+                <pre>
+                    <code>switch (a) <mark>{</mark></code>
+                    <code>case "1":</code>
+                    <code>  JS code;</code>
+                    <code>  <mark>break;</mark></code>
+                    <code>case "2":</code>
+                    <code>  JS code;</code>
+                    <code>  break;</code>
+                    <code>default:</code>
+                    <code>  JS code;</code>
+                    <code>  break;</code>
+                    <code><mark>}</mark></code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide24">
+        <div>
+            <section>
+                <header>
+                    <h2>Циклы</h2>
+                </header>
+                <p>Повторение определённой последовательности действий, до наступления события, определённого условным выражением</p>
+                <ul>
+                    <li>Цикл <strong>do</strong> .. <strong>while</strong>
+                        <ul>
+                            <li>Событие может быть внешним</li>
+                            <li>Может не завершиться никогда</li>
+                        </ul></li>
+                    <li>Цикл <strong>for</strong>
+                        <ul>
+                            <li>Условие выполнения описыватеся в определении цикла</li>
+                            <li>Может не завершиться никогда</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide25">
+        <div>
+            <section>
+                <header>
+                    <h2>Цикл do .. while</h2>
+                </header>
+                <pre>
+                    <code>var x = 1;</code>
+                    <code>do {</code>
+                    <code>  alert(x);</code>
+                    <code>  x++;</code>
+                    <code>}</code>
+                    <code>while (x < 5);</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide26">
+        <div>
+            <section>
+                <header>
+                    <h2>Цикл for</h2>
+                </header>
+                <pre>
+                    <code>for (var x = 1; x < 5; x++) {</code>
+                    <code>  alert(x);</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+
+	<!--
+		Эта возможность находится в разработке!
+		
+		Добавьте класс «inner» к любому родительскому
+		элементу для того, чтобы обозначить блок
+		внутренней навигации. Нажатие кнопки «следующий»
+		добавит класс «active» каждому последующему
+		ребёнку, начиная с первого.
+
+		Конкретное поведение зависит от стилей
+		текущей темы: элемент в активном состоянии
+		может быть показан, будучи предварительно спрятан,
+		либо вы можете выделить его, к примеру, цветом
+		или полужирным начертанием.
+
+		Для того, чтобы начать слайд с первого активного
+		элемента, добавьте класс «active» вручную.
+
+		После активации последнего элемента, нажатие
+		кнопки «следующий» переключит следующий слайд.
+
+	<div class="slide" id="InnerNavigation"><div>
+		<section>
+			<header>
+				<h2>Внутренняя навигация</h2>
+			</header>
+			<ol class="inner">
+				<li class="active">This tool is provided</li>
+				<li>Without warranty, guarantee</li>
+				<li>Or much in the way of explanation
+				<li>Erase your hard drive.</li>
+			</ol>
+		</section>
+	</div></div> -->
+	<!--
+		Для того, чтобы убрать индикатор прогресса
+		из презентации, просто удалите элемент «progress».
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../../../shower/scripts/script.js"></script>
+	<!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
+</body>
+</html>

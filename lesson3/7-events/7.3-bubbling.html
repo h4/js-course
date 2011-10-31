@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<style type="text/css">
+    div {
+        padding:20px;
+        }
+    .d1 {
+        width:100px;
+        background:green;
+        }
+    .d2 {
+        background:blue;
+        }
+    .d3 {
+        height:20px;
+        background:red;
+        }
+</style>
+
+<div class="d1" onclick="highlight(this)">
+    <div class="d2" onclick="highlight(this)">
+        <div class="d3" onclick="highlight(this)">
+        </div> 
+    </div>
+</div>
+
+<script>
+function highlight(elem) {
+    elem.style.backgroundColor='yellow'
+    alert(elem.className)
+    elem.style.backgroundColor = '';
+    return false;
+}
+</script>
+
+</body>
+</html>
+
+        http://yandex.ru/yandsearch?text=%D1%85%D0%B5%D0%BB%D0%BB%D0%BE&lr=2
