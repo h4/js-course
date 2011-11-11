@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+    <title>Занятие 6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="../../../shower/themes/ribbon/styles/style.css">
+    <style>
+        #Cover H2 {
+            color:#FFF;
+            text-align:center;
+            font-size:70px;
+            }
+    </style>
+</head>
+<body class="list">
+    <header class="caption">
+        <h1>Занятие 6</h1>
+        <p>Работа со стилевыми правилами</p>
+    </header>
+    <div class="slide bg" id="Cover"><div>
+        <section>
+            <header>
+                <h2>Объект style</h2>
+            </header>
+            <img src="../../../shower/pictures/cover.jpg" alt="">
+            <!-- © John Carey, http://fiftyfootshadows.net/ -->
+        </section>
+    </div></div>
+    <div class="slide" id="slide1">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект style</h2>
+                </header>
+                <p>Даёт доступ к изменению визуального отображения элемента</p>
+                <ul>
+                    <li>document.getElementById("el1").<code>style</code>.background="#EEE";</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide2">
+        <div>
+            <section>
+                <header>
+                    <h2>Изменение свойств элемента</h2>
+                </header>
+                <ul>
+                    <li>Изменение свойств объекта style</li>
+                    <li>Изменение класса элемента</li>
+                    <li>Подключение дополнительной таблицы стилей</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide3">
+        <div>
+            <section>
+                <header>
+                    <h2>Изменение стиля элемента</h2>
+                </header>
+                <ol>
+                    <li>Найти нужный элемент
+                        <ol>
+                            <li>document.getElementById</li>
+                            <li>document.getElementsByTagName(<code>t</code>)[<code>num</code>]</li>
+                            <li>document.body</li>
+                        </ol>
+                    </li>
+                    <li>Обратиться к объекту-свойству <code>style</code></li>
+                    <li>Обратиться к нужному свойству объекта style</li>
+                    <li>Изменить значение свойства</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide4">
+        <div><section>
+            <header>
+                <h2>Особенности свойств объекта style</h2>
+            </header>
+            <ul>
+                <li>Тип свойста — строка</li>
+                <li>background-color => backgroundColor</li>
+                <li>Возвращает значение, указанное в <code>атрибуте</code> style</li>
+            </ul>
+        </section></div>
+    </div>
+    <div class="slide shout" id="slide5">
+        <div>
+            <section>
+                <header>
+                    <h2>Желательно кешировать объект style</h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide6">
+        <div>
+            <section>
+                <header>
+                    <h2>Реальное (вычисленное) значение свойства</h2>
+                </header>
+                <pre><code>p {font-size: 1.2em;}</code></pre>
+                <ul>
+                    <li>elem.currentStyle.fontSize</li>
+                    <li>window.getComputedStyle(elem, null).fontSize</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide7">
+        <div>
+            <section>
+                <header>
+                    <h2>Недостатки el.style</h2>
+                </header>
+                <ul>
+                    <li>Много рутинной работы</li>
+                    <li>Вынесение свойств css в js-код</li>
+                    <li>Производительность</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide8">
+        <div>
+            <section>
+                <header>
+                    <h2>Изменение имени класса</h2>
+                </header>
+                <p>Если нужно одновременно измненить несколько свойств</p>
+                <pre>
+                    <code>var el = document.getElementById("elID");</code>
+                    <code>el.className = "newClassName";</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide9">
+        <div>
+            <section>
+                <header>
+                    <h2>Таблицы стилей</h2>
+                </header>
+                <ul>
+                    <li>Переключение свойства <code>disabled</code> элементов <em>link</em> и <em>style</em></li>
+                    <li>Коллекция document.styleSheet</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide10">
+        <div>
+            <section>
+                <header>
+                    <h2>Анимация</h2>
+                </header>
+                <ul>
+                    <li>Найти элемент</li>
+                    <li>Изменить его свойства</li>
+                    <li>Событие начала анимации</li>
+                    <li>Событие завершения анимации</li>
+                    <li>Таймер пошаговой анимации</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide11">
+        <div>
+            <section>
+                <header>
+                    <h2>CSS-свойства, применяемые в анимации</h2>
+                </header>
+                <ul>
+                    <li>Цвет текста и фона</li>
+                    <li>Позиционирование</li>
+                    <li>Тип отображения</li>
+                    <li>Видимость объекта</li>
+                    <li>Прозрачность</li>
+                    <li>Размеры объекта</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide12">
+        <div>
+            <section>
+                <header>
+                    <h2>Создание анимации</h2>
+                </header>
+                <ul>
+                    <li>Сформировать свойства начального состояния (A)</li>
+                    <li>Сформировать свойства конечного состояния (B)</li>
+                    <li>Описать механизм перехода из A в B</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide13">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект table</h2>
+                </header>
+                <p>Предоставляет доступ к управлению табличными данными</p>
+
+                <p>Используется для визуализации больших объёмов данных (от сервера)</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide14">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства-коллекции</h2>
+                </header>
+                <ul>
+                    <li>cells[]</li>
+                    <li>rows[]</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide15">
+        <div>
+            <section>
+                <header>
+                    <h2>Методы</h2>
+                </header>
+                <ul>
+                    <li>insertCell()</li>
+                    <li>insertRow()</li>
+                    <li>deleteCell()</li>
+                    <li>deleteRow()</li>
+                    <li>deleteRow()</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide16">
+        <section>
+            <header>
+                <h2>Заполнение таблицы данными</h2>
+            </header>
+            <ol>
+                <li>Выбрать элемент-таблицу</li>
+                <li>Создать строку</li>
+                <li>Создать ячейку</li>
+                <li>Заполнить ячейку данными</li>
+                <li>Повторить пункты 2-4</li>
+            </ol>
+        </section>
+    </div>
+
+    <!--
+        Эта возможность находится в разработке!
+
+        Добавьте класс «inner» к любому родительскому
+        элементу для того, чтобы обозначить блок
+        внутренней навигации. Нажатие кнопки «следующий»
+        добавит класс «active» каждому последующему
+        ребёнку, начиная с первого.
+
+        Конкретное поведение зависит от стилей
+        текущей темы: элемент в активном состоянии
+        может быть показан, будучи предварительно спрятан,
+        либо вы можете выделить его, к примеру, цветом
+        или полужирным начертанием.
+
+        Для того, чтобы начать слайд с первого активного
+        элемента, добавьте класс «active» вручную.
+
+        После активации последнего элемента, нажатие
+        кнопки «следующий» переключит следующий слайд.
+
+    <div class="slide" id="InnerNavigation"><div>
+        <section>
+            <header>
+                <h2>Внутренняя навигация</h2>
+            </header>
+            <ol class="inner">
+                <li class="active">This tool is provided</li>
+                <li>Without warranty, guarantee</li>
+                <li>Or much in the way of explanation
+                <li>Erase your hard drive.</li>
+            </ol>
+        </section>
+    </div></div> -->
+    <!--
+        Для того, чтобы убрать индикатор прогресса
+        из презентации, просто удалите элемент «progress».
+        -->
+    <div class="progress"><div></div></div>
+    <script src="../../../shower/scripts/script.js"></script>
+    <script type="text/javascript">(function() {
+        el = document.getElementById("slideDate");
+        function writeCurDate() {
+            var dtA = new Date();
+            el.innerHTML = dtA;
+        }
+        setInterval(writeCurDate, 1000);
+    })();</script>
+    <!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
+</body>
+</html>

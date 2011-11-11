@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+</head>
+<body>
+<input type="button" value="Назад" onclick="prevPhoto();">
+<img src="../images/1.jpg" alt="">
+<input type="button" value="Вперёд" onclick="nextPhoto();">
+<script type="text/javascript">
+        var curImg = 1,
+            img = document.getElementsByTagName('img')[0];
+        function nextPhoto() {
+            curImg++;
+            img.src = "../images/" + curImg + ".jpg";
+        }
+        function prevPhoto() {
+            curImg--;
+            img.src = "../images/" + curImg + ".jpg";
+        }
+</script>
+</body>
+</html>
