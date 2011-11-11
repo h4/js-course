@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+    <title>Занятие 7</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="../../../shower/themes/ribbon/styles/style.css">
+    <style>
+        #Cover H2 {
+            color:#FFF;
+            text-align:center;
+            font-size:70px;
+            }
+        .slide li p {
+            font-size:0.9em;
+            margin-bottom:0;
+            }
+    </style>
+</head>
+<body class="list">
+<header class="caption">
+    <h1>Занятие 7</h1>
+
+    <p>Формы. Фреймы. Cookies</p>
+</header>
+<div class="slide bg" id="Cover">
+    <div>
+        <section>
+            <header>
+                <h2>Формы. Фреймы. Cookies</h2>
+            </header>
+            <img src="../../../shower/pictures/cover.jpg" alt="">
+            <!-- © John Carey, http://fiftyfootshadows.net/ -->
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide20">
+    <div>
+        <section>
+            <header>
+                <h2>Фреймы</h2>
+            </header>
+            <p>Подгрузка дополнительных данных на страницу</p>
+            <ul>
+                <li>frame</li>
+                <li>iframe</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide21">
+    <div>
+        <section>
+            <header>
+                <h2>Доступ к фрейму</h2>
+            </header>
+            <ul>
+                <li>var win = window</li>
+                <li>var frame_0 = window.frames[0]</li>
+                <li>frame_0 — window</li>
+                <li>win == frame_0.parent</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide22">
+    <div>
+        <section>
+            <header>
+                <h2>Cookies</h2>
+            </header>
+            <p>Хранение данных в браузере</p>
+            <ul>
+                <li>document.cookie</li>
+                <li>Строка ключ=значение</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide23">
+    <div>
+        <section>
+            <header>
+                <h2>Cookies</h2>
+            </header>
+            <ul>
+                <li>Запись</li>
+                <li>Чтение</li>
+                <li>Доступно серверу</li>
+                <li>Not secure</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide1">
+    <div>
+        <section>
+            <header>
+                <h2>Формы</h2>
+            </header>
+            <ul>
+                <li>Передача данных от пользователя на сервер</li>
+                <li>Обработка введённых данных</li>
+                <li>Проверка введённых данных</li>
+                <li>Заполнение полей формы</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide2">
+    <div>
+        <section>
+            <header>
+                <h2>Работа с формами</h2>
+            </header>
+            <ul>
+                <li>Объект формы
+                    <ul>
+                        <li>Свойства объекта</li>
+                        <li>Методы объекта</li>
+                        <li>Обработчики событий</li>
+                    </ul>
+                </li>
+                <li>Объекты элементов формы
+                    <ul>
+                        <li>Свойства объекта</li>
+                        <li>Методы объекта</li>
+                        <li>Обработчики событий</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide3">
+    <div>
+        <section><header>
+            <h2>Получение объекта формы</h2>
+        </header>
+        <ul>
+            <li>document.forms[]</li>
+            <li>document.<code>NAME</code></li>
+            <li>document.getElementById()</li>
+        </ul></section>
+    </div>
+</div>
+<div class="slide" id="slide4">
+    <div>
+        <section>
+            <header>
+                <h2>Методы формы</h2>
+            </header>
+            <ul>
+                <li>submit()</li>
+                <li>reset()</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide5">
+    <div>
+        <section>
+            <header>
+                <h2>Свойства формы</h2>
+            </header>
+            <ul>
+                <li>elements</li>
+                <li>length</li>
+                <li>action</li>
+                <li>enctype</li>
+                <li>method</li>
+                <li>name</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide6">
+    <div>
+        <section>
+            <header>
+                <h2>Протокол HTTP. Методы</h2>
+            </header>
+            <ul>
+                <li>OPTIONS</li>
+                <li><code>GET</code></li>
+                <li>HEAD</li>
+                <li><code>POST</code></li>
+                <li>PUT</li>
+                <li>PATCH</li>
+                <li>DELETE</li>
+                <li>TRACE</li>
+                <li>LINK</li>
+                <li>UNLINK</li>
+                <li>CONNECT</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide7">
+    <div>
+        <section>
+            <header>
+                <h2>Метод GET</h2>
+            </header>
+            <p>Передача данных как часть URL. Предназначен для запроса данных</p>
+                    <ul>
+                        <li>Данные открыты</li>
+                        <li>Ограничение по объему данных</li>
+                        <li>Проще тестировать</li>
+                        <li>Можно использовать без сервера</li>
+                    </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide8">
+    <div>
+        <section>
+            <header>
+                <h2>Метод POST</h2>
+            </header>
+            <p>Передача данных серверу отдельным потоком. Продназначен для передачи данных</p>
+                    <ul>
+                        <li>Данные скрыты от пользователя</li>
+                        <li>Практически нет отграчничения по объему данных</li>
+                        <li>Требуется наличие сервера</li>
+                        <li>Запрос подтверждения повторной отправки</li>
+                    </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide9">
+    <div>
+        <section>
+            <header>
+                <h2>Enctype</h2>
+            </header>
+            <ul>
+                <li>application/x-www-form-urlencoded
+                <p>Вместо пробелов ставится +, символы вроде русских букв кодируются их шестнадцатеричными значениями (например, %D0%90%D0%BD%D1%8F вместо Аня).</p></li>
+                <li>multipart/form-data
+                <p>Данные не кодируются. Это значение применяется при отправке файлов.</p></li>
+                <li>text/plain
+                <p>Пробелы заменяются знаком +, буквы и другие символы не кодируются.</p></li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide10">
+    <div>
+        <section>
+            <header>
+                <h2>Элементы формы</h2>
+            </header>
+            <p>Самый распространённый: input. Тип объекта — атрибут type</p>
+            <ul>
+                <li>button</li>
+                <li>submit</li>
+                <li>reset</li>
+                <li>text</li>
+                <li>checkbox</li>
+                <li>radio</li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+<div class="slide" id="slide11">
+    <div>
+        <section>
+            <header>
+                <h2>Элементы формы</h2>
+            </header>
+            <pre>
+                <code>&lt;form name="myForm"&gt;</code>
+                <code>    &lt;input type="text" name="<mark>firstName</mark>"&gt;</code>
+                <code>&lt;/form&gt;</code>
+            </pre>
+            <pre>
+                <code>var nameEl =  document.myForm.<mark>firstName</mark>;</code>
+            </pre>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide12">
+    <div>
+        <section>
+            <header>
+                <h2>Общие свойства</h2>
+            </header>
+            <ul>
+                <li>disabled</li>
+                <li>form</li>
+                <li>name</li>
+                <li>type</li>
+                <li>value</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide shout" id="slide13">
+    <div>
+        <section>
+            <header>
+                <h2>name и value</h2>
+            </header>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide14">
+    <div>
+        <section>
+            <header>
+                <h2>Общие события элентов формы</h2>
+            </header>
+            <ul>
+                <li>onfocus</li>
+                <li>onselect *</li>
+                <li>onblur</li>
+                <li>onclick *</li>
+                <li>onchange *</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide15">
+    <div>
+        <section>
+            <header>
+                <h2>checkbox и radio</h2>
+            </header>
+            <p>Дополнительные свойства</p>
+            <ul>
+                <li>checked</li>
+                <li>defaultChecked</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide16">
+    <div>
+        <section>
+            <header>
+                <h2>select</h2>
+            </header>
+            <p>Дополнительные свойства и методы</p>
+            <ul>
+                <li>options[]</li>
+                <li>multiple</li>
+                <li>selectedIndex</li>
+                <li>size</li>
+                <li>add()</li>
+                <li>remove()</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide17">
+    <div>
+        <section>
+            <header>
+                <h2>option</h2>
+            </header>
+            <p>Дополнительные свойства</p>
+            <ul>
+                <li>defaultSelected</li>
+                <li>selected</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide18">
+    <div>
+        <section>
+            <header>
+                <h2>Проверка форм</h2>
+            </header>
+            <ul>
+                <li>Обойти все обязательные элементы формы</li>
+                <li>Проверить значение атрибута <code>value</code></li>
+                <li>Добавить сообщение об ошибке, если есть</li>
+                <li>Вернуть <strong>true</strong> или <strong>false</strong></li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide19">
+    <div>
+        <section>
+            <header>
+                <h2>Проверка форм</h2>
+            </header>
+            <ul>
+                <li>Событие onsubmit. Прерывание действия по умолчанию</li>
+                <li>Прочие события. Вызов метода submit()</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide shout" id="slide19_1">
+    <div>
+        <section>
+            <header>
+                <h2>Проверка на сервере – обязательна</h2>
+            </header>
+        </section>
+    </div>
+</div>
+
+
+<!--
+   Эта возможность находится в разработке!
+
+   Добавьте класс «inner» к любому родительскому
+   элементу для того, чтобы обозначить блок
+   внутренней навигации. Нажатие кнопки «следующий»
+   добавит класс «active» каждому последующему
+   ребёнку, начиная с первого.
+
+   Конкретное поведение зависит от стилей
+   текущей темы: элемент в активном состоянии
+   может быть показан, будучи предварительно спрятан,
+   либо вы можете выделить его, к примеру, цветом
+   или полужирным начертанием.
+
+   Для того, чтобы начать слайд с первого активного
+   элемента, добавьте класс «active» вручную.
+
+   После активации последнего элемента, нажатие
+   кнопки «следующий» переключит следующий слайд.
+
+<div class="slide" id="InnerNavigation"><div>
+   <section>
+       <header>
+           <h2>Внутренняя навигация</h2>
+       </header>
+       <ol class="inner">
+           <li class="active">This tool is provided</li>
+           <li>Without warranty, guarantee</li>
+           <li>Or much in the way of explanation
+           <li>Erase your hard drive.</li>
+       </ol>
+   </section>
+</div></div> -->
+<!--
+Для того, чтобы убрать индикатор прогресса
+из презентации, просто удалите элемент «progress».
+-->
+<div class="progress">
+    <div></div>
+</div>
+<script src="../../../shower/scripts/script.js"></script>
+<script type="text/javascript">(function() {
+    el = document.getElementById("slideDate");
+    function writeCurDate() {
+        var dtA = new Date();
+        el.innerHTML = dtA;
+    }
+
+    setInterval(writeCurDate, 1000);
+})();</script>
+<!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
+</body>
+</html>
