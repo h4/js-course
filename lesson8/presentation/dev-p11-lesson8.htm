@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+    <title>Занятие 8</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="../../../shower/themes/ribbon/styles/style.css">
+    <style>
+        #Cover H2 {
+            color:#FFF;
+            text-align:center;
+            font-size:70px;
+            }
+        .slide li p {
+            font-size:0.9em;
+            margin-bottom:0;
+            }
+    </style>
+</head>
+<body class="list">
+<header class="caption">
+    <h1>Занятие 8</h1>
+
+    <p>DOM - объектаня модель документа</p>
+</header>
+<div class="slide bg" id="Cover">
+    <div>
+        <section>
+            <header>
+                <h2>DOM - объектаня модель документа</h2>
+            </header>
+            <img src="../../../shower/pictures/cover.jpg" alt="">
+            <!-- © John Carey, http://fiftyfootshadows.net/ -->
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide1">
+    <div>
+        <section>
+            <header>
+                <h2>DOM</h2>
+            </header>
+            <p>Предоставляет прикладной интерфейс (API) представления документа, доступа его элементам и манипуляции ими.</p>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide2">
+    <div>
+        <section>
+            <header>
+                <h2>DOM</h2>
+            </header>
+
+            <ul>
+                <li>Доступ к элементам
+                    <ul>
+                        <li>Напрямую</li>
+                        <li>Через «родственные отношения»</li>
+                    </ul>
+                </li>
+                <li>Изменения документа
+                    <ul>
+                        <li>Перемещение узлов</li>
+                        <li>Добавление узлов</li>
+                        <li>Удаление узлов</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide3">
+    <div>
+        <section>
+            <header>
+                <h2>Представление документа</h2>
+            </header>
+            <ul>
+                <li>Документ как дерево</li>
+                <li>Каждый элемент — узел дерева</li>
+                <li>Текст, атрибуты и комментарии — тоже узлы</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide4">
+    <div>
+        <section>
+            <pre>
+                <code>&lt;html&gt;</code>
+                <code>    &lt;head&gt;</code>
+                <code>        &lt;title&gt;Простая страница&lt;/title&gt;</code>
+                <code>    &lt;/head&gt;</code>
+                <code>    &lt;body&gt;</code>
+                <code>    &lt;h1&gt;Простая страница&lt;/h1&gt;</code>
+                <code>    &lt;p&gt;Пример &lt;em&gt;простой страницы&lt;/em&gt;&lt;/p&gt;</code>
+                <code>    &lt;/body&gt;</code>
+                <code>&lt;/html&gt;</code>
+            </pre>
+        </section>
+    </div>
+</div>
+<div class="slide bg" id="slide5">
+    <div>
+        <section><img src="img/tree.png" alt=""></section>
+    </div>
+</div>
+<div class="slide" id="slide6">
+    <div>
+        <section>
+            <header>
+                <h2>node.nodeType</h2>
+            </header>
+            <p>Определяет тип узла. Всего 12 типов</p>
+            <ul>
+                <li><code>1</code> – element, ELEMENT_NODE</li>
+                <li>2 - attr, ATTRIBUTE_NODE</li>
+                <li><code>3</code> - text, TEXT_NODE</li>
+                <li>8 - comment, COMMENT_NODE</li>
+                <li>9 - document, DOCUMENT_NODE</li>
+                <li>11 - document fragment, DOCUMENT_FRAGMENT_NODE</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide7">
+    <div>
+        <section>
+            <header>
+                <h2>Поддержка браузерами</h2>
+            </header>
+            <p>Большая часть DOM 2 поддерживается всеми браузерами.</p>
+
+            <p>Пример различий — отношение к пустой строке.</p>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide8">
+    <div>
+        <section>
+            <header>
+                <h2>Свойства и методы</h2>
+            </header>
+            <p>Набор свойств и методов зависит от типа узла</p>
+            <ul>
+                <li>NODE.nodeType</li>
+                <li>NODE.childNodes</li>
+                <li>NODE.attributes</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide9">
+    <div>
+        <section>
+            <header>
+                <h2>childNodes</h2>
+            </header>
+            <p>Возвращает список узлов NodeList</p>
+            <ul>
+                <li>Похоже на Array</li>
+                <li>Изменения в списке становятся доступны сразу</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide shout" id="slide10">
+    <div>
+        <section>
+            <header>
+                <h2>Наиболее интересен HTMLElement</h2>
+            </header>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide11">
+    <div>
+        <section>
+            <header>
+                <h2>Свойства объекта Element</h2>
+            </header>
+            <ul>
+                <li>className</li>
+                <li>id</li>
+                <li>height</li>
+                <li>width</li>
+                <li>offsetLeft</li>
+                <li>offsetTop</li>
+                <li>parentNode</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide12">
+    <div>
+        <section>
+            <header>
+                <h2>Методы объекта Element</h2>
+            </header>
+            <ul>
+                <li>hasChildNodes()</li>
+                <li>appendChild()</li>
+                <li>removeChild()</li>
+                <li>replaceChild()</li>
+                <li>getAttribute()</li>
+                <li>getElementsByTagName()</li>
+                <li>item()</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide13">
+    <div>
+        <section>
+            <header>
+                <h2>Создание новых узлов</h2>
+            </header>
+            <ul>
+                <li>document.createElement()</li>
+                <li>document.createTextNode()</li>
+            </ul>
+            <ul>
+                <li>ELEM.innerHTML</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide shout" id="slide14">
+    <div>
+        <section>
+            <header>
+                <h2>innerhtml.ru</h2>
+            </header>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide15">
+    <div>
+        <section>
+            <header>
+                <h2>Добавление нового фрагмента в документа</h2>
+            </header>
+            <ol>
+                <li>Найти элемент-родитель</li>
+                <li>Создать новый элемент</li>
+                <li>Добавить содержимое элемента
+                    <ul>
+                        <li>Узлы–элементы</li>
+                        <li>Текстовые узлы</li>
+                    </ul>
+                </li>
+                <li>Добавить атрибуты элемента</li>
+                <li>Добавить готовый узел в дерево</li>
+            </ol>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide16">
+    <div>
+        <section>
+            <header>
+                <h2>Доступ к элементу</h2>
+            </header>
+            <ul>
+                <li>document.getElement<code>*</code></li>
+                <li>ELEM.firstChild</li>
+                <li>ELEM.lastChild</li>
+                <li>ELEM.childNodes()</li>
+                <li>ELEM.parentNode</li>
+                <li>ELEM.nextSibling</li>
+                <li>ELEM.previousSibling</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide17">
+    <div>
+        <section>
+            <header>
+                <h2>firstChild и lastChild</h2>
+            </header>
+            <img class="middle" src="img/dom-childs.png" alt=""></section>
+    </div>
+</div>
+<div class="slide" id="slide18">
+    <div>
+        <section>
+            <header>
+                <h2>parentNode, nextSibling и previousSibling</h2>
+            </header>
+            <img class="middle" src="img/dom-childs.png" alt=""></section>
+    </div>
+</div>
+
+
+
+<!--
+   Эта возможность находится в разработке!
+
+   Добавьте класс «inner» к любому родительскому
+   элементу для того, чтобы обозначить блок
+   внутренней навигации. Нажатие кнопки «следующий»
+   добавит класс «active» каждому последующему
+   ребёнку, начиная с первого.
+
+   Конкретное поведение зависит от стилей
+   текущей темы: элемент в активном состоянии
+   может быть показан, будучи предварительно спрятан,
+   либо вы можете выделить его, к примеру, цветом
+   или полужирным начертанием.
+
+   Для того, чтобы начать слайд с первого активного
+   элемента, добавьте класс «active» вручную.
+
+   После активации последнего элемента, нажатие
+   кнопки «следующий» переключит следующий слайд.
+
+<div class="slide" id="InnerNavigation"><div>
+   <section>
+       <header>
+           <h2>Внутренняя навигация</h2>
+       </header>
+       <ol class="inner">
+           <li class="active">This tool is provided</li>
+           <li>Without warranty, guarantee</li>
+           <li>Or much in the way of explanation
+           <li>Erase your hard drive.</li>
+       </ol>
+   </section>
+</div></div> -->
+<!--
+Для того, чтобы убрать индикатор прогресса
+из презентации, просто удалите элемент «progress».
+-->
+<div class="progress">
+    <div></div>
+</div>
+<!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
+</body>
+</html>
