@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Объект File</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script type="text/javascript">
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var f = fso.GetFile("C:\\foto.jpg");
+        var x = f.Type;
+        document.write("<br>"+x);
+    </script>
+</head>
+<body>
+<h1>Объект File</h1>
+</body>
+</html>

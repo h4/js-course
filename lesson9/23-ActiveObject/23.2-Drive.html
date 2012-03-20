@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Объект Drive</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script type="text/javascript">
+        function AvailSpace() {
+            var fso = new ActiveXObject("Scripting.FileSystemObject");
+            var d = fso.GetDrive("C");
+            return d.AvailableSpace / 1024;
+        }
+        //объем дискового пространства, доступного для пользователя, в байтах.
+        document.write(AvailSpace());
+    </script>
+</head>
+<body>
+<h1>Объект Drive</h1>
+</body>
+</html>

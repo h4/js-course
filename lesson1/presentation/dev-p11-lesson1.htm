@@ -1,0 +1,678 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<title>Занятие 1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="../../../shower/themes/ribbon/styles/style.css">
+	<style>
+		#Cover H2 {
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Занятие 1</h1>
+		<p>Введение в Javascript</p>
+	</header>
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+                <h2>Введение в JavaScript</h2>
+			</header>
+            <img src="../../../shower/pictures/js-cover.jpg" alt="">
+			<!-- © John Carey, http://fiftyfootshadows.net/ -->
+		</section>
+	</div></div>
+	<div class="slide" id="slide2">
+        <div>
+    		<section>
+    			<header>
+    				<h2>Веб-технологии</h2>
+    			</header>
+                <ol>
+                    <li>Графический дизайн</li>
+                    <li>Клиентские технологии</li>
+                    <li>Серверные технологии</li>
+                    <li>UserExpirience и юзабилити</li>
+                </ol>
+    		</section>
+    	</div>
+    </div>
+    <div class="slide" id="slide3">
+        <div>
+            <section>
+                <header>
+                    <h2>Клиентские веб-технологии</h2>
+                </header>
+                <ol>
+                    <li>CSS</li>
+                    <li>HTML (HTML 5)</li>
+                    <li>JavaScript</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide4">
+        <div>
+            <section>
+                <header>
+                    <h2>Клиент-серверное взаимодействие</h2>
+                </header>
+                <ol>
+                    <li>Ссылки</li>
+                    <li>Формы</li>
+                    <li>A<code><strong>J</strong></code>AX</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide5">
+        <div>
+            <section>
+                <header>
+                    <h2>Область применения JavaScript</h2>
+                </header>
+                <ol>
+                    <li>Сайты и веб-приложения</li>
+                    <li>Браузерные игры</li>
+                    <li>Расширения к браузерам</li>
+                    <li>Серверные приложения</li>
+                    <li>Прикладное ПО</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide6">
+        <div>
+            <section>
+                <header>
+                    <h2>«Уровни« JavaScript</h2>
+                </header>
+                <ol>
+                    <li>Ядро — ECMA</li>
+                    <li>Реализации
+                        <ul>
+                            <li>Браузеры</li>
+                            <li>Другие приложения</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide7">
+        <div>
+            <section>
+                <header>
+                    <h2>История развития</h2>
+                </header>
+                <ul>
+                    <li>1995. Netscape LiveScript</li>
+                    <li>1996. Microsoft JScript</li>
+                    <li>1997. Спецификация ECMAScript</li>
+                    <li>2000. ECMA 3</li>
+                    <li>2005. Придуман термин AJAX</li>
+                    <li>2009. ECMA 5</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide8">
+        <div>
+            <section>
+                <header>
+                    <h2>История развития</h2>
+                </header>
+                <blockquote>
+                    <p>Самый неправильно понятый язык программирования в мире стал самым популярным в мире языком программирования</p>
+                </blockquote>
+                <p>Дуглас Крокфорд</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide9">
+        <div>
+            <section>
+                <header>
+                    <h2><a href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html">Индекс Tiobe</a></h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide10">
+        <div>
+            <section>
+                <header>
+                    <h2>Инструментальные средства разработки</h2>
+                </header>
+                <ol>
+                    <li>Текстовый редактор</li>
+                    <li>Браузер</li>
+                    <li>Отладчики</li>
+                    <li>Документация</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide11">
+        <div>
+            <section>
+                <header>
+                    <h2>Текстовый редактор</h2>
+                </header>
+                <ol>
+                    <li><del>Блокнот (Notepad)</del></li>
+                    <li>Notepad++</li>
+                    <li>Adobe Dreamweaver</li>
+                    <li>WebStorm</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide12">
+        <div>
+            <section>
+                <header>
+                    <h2>Браузеры</h2>
+                </header>
+                <ol>
+                    <li>Internet Explorer</li>
+                    <li>Mozilla Firefox</li>
+                    <li>Google Chrome / Chromium</li>
+                    <li>Opera</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide13">
+        <div>
+            <section>
+                <header>
+                    <h2>Отладчики</h2>
+                </header>
+                <p>В большинство современных браузеров отладчик встроен</p>
+                <ol>
+                    <li>Internet Explorer 9+</li>
+                    <li>Mozilla Firefox: Firebug</li>
+                    <li>Google Chrome / Chromium</li>
+                    <li>Opera</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide14">
+        <div>
+            <section>
+                <header>
+                    <h2>Языки программирования</h2>
+                </header>
+                <ol>
+                    <li>Языки сценариев (Скриптовые)</li>
+                    <li>Компилируемые языки</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide15">
+        <div>
+            <section>
+                <header>
+                    <h2>Java<code>Script</code></h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide16">
+        <div>
+            <section>
+                <header>
+                    <h2>Достоинства сценарных языков</h2>
+                </header>
+                <ol>
+                    <li>Относительная простота освоения</li>
+                    <li>Кроссплатформенность</li>
+                    <li>Относительная простота исправленя ошибок</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide17">
+        <div>
+            <section>
+                <header>
+                    <h2>Недостатки сценарных языков</h2>
+                </header>
+                <ol>
+                    <li>Более низкая скорость работы</li>
+                    <li>Огрниченный доступ к аппаратному обеспечению</li>
+                    <li>Зависимость от среды исполнения</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide18">
+        <div>
+            <section>
+                <header>
+                    <h2>Примеры скриптовых языков</h2>
+                </header>
+                <ol>
+                    <li>ActionScript</li>
+                    <li>AppleScript</li>
+                    <li>Bash</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>Ruby</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide19">
+        <div>
+            <section>
+                <header>
+                    <h2>Особенности JavaScript</h2>
+                </header>
+                <ol>
+                    <li>Сценарный язык программирования</li>
+                    <li>Объектно-ориентированный</li>
+                    <li>Динамическая типизация</li>
+                    <li>Прототипное наследование</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide20">
+        <div>
+            <section>
+                <header>
+                    <h2>Программирование</h2>
+                </header>
+                <ol>
+                    <li>Данные и структуры данных</li>
+                    <li>Операции преобразования данных</li>
+                    <li>Операции вычисления</li>
+                    <li>Повторное использование кода</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide21">
+        <div>
+            <section>
+                <header>
+                    <h2>Встраивание сценариев JavaScript</h2>
+                </header>
+                <ol>
+                    <li>Inline-сценарии</li>
+                    <li>Встроенные сценарий</li>
+                    <li>Внешний сценарий</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide22">
+        <div>
+            <section>
+                <header>
+                    <h2><a href="http://dl.avalon.ru/mod/resource/view.php?id=21715">Встраивание сценариев</a></h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide23">
+        <div>
+            <section>
+                <header>
+                    <h2>Синтаксис языка</h2>
+                </header>
+                <ol>
+                    <li>Правила форматирования</li>
+                    <li>Комментарии</li>
+                    <li>Переменные</li>
+                    <li>Выражения и операторы</li>
+                    <li>Инструкции</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide24">
+        <div>
+            <section>
+                <header>
+                    <h2>Переменные</h2>
+                </header>
+                <ol>
+                    <li>Способ хранения данных</li>
+                    <li>Имя в ячейке памяти</li>
+                    <li>Значение можно изменять (<em>переменная</em>)</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide25">
+        <div>
+            <section>
+                <header>
+                    <h2>Имя переменной</h2>
+                </header>
+                <h3>Может содержать</h3>
+                <ol>
+                    <li>Символы латинского алфавита</li>
+                    <li>Цифры</li>
+                    <li>Символ подчёркивания</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide26">
+        <div>
+            <section>
+                <header>
+                    <h2>Имя переменной</h2>
+                </header>
+                <h3>Не допускаются</h3>
+                <ol>
+                    <li>Символ -</li>
+                    <li>Число как первый символ</li>
+                    <li>Пробелы</li>
+                    <li>Зарезервированные слова</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide27">
+        <div>
+            <section>
+                <header>
+                    <h2>Присвоение значения переменной</h2>
+                </header>
+                <ol>
+                    <li>Явное присваивания</li>
+                    <li>Результат каких-либо операций</li>
+                    <li>Запрос данных от пользователя</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide28">
+        <div>
+            <section>
+                <header>
+                    <h2><a href="http://dl.avalon.ru/mod/resource/view.php?id=21717">Работа с переменными</a></h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide29">
+        <div>
+            <section>
+                <header>
+                    <h2>Типы и структуры данных</h2>
+                </header>
+                <ol>
+                    <li>Примитивные</li>
+                    <li>Составные</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide30">
+        <div>
+            <section>
+                <header>
+                    <h2>Примитивные типы данных</h2>
+                </header>
+                <ol>
+                    <li>Number — числовой</li>
+                    <li>String — строковый</li>
+                    <li>Boolean — логический</li>
+                    <li>Null</li>
+                    <li>Undefined</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide31">
+        <div>
+            <section>
+                <header>
+                    <h2>Составные типы данных</h2>
+                </header>
+                <ol>
+                    <li>Object</li>
+                </ol>
+                <h3>Объекты ECMAScript</h3>
+                <ol>
+                    <li>Array — массив</li>
+                    <li>Function — функция</li>
+                    <li>Date</li>
+                    <li>Error</li>
+                    <li>Math</li>
+                    <li>RegExp</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide32">
+        <div>
+            <section>
+                <header>
+                    <h2>Операции над данными</h2>
+                </header>
+                <ol>
+                    <li>Допустимые операции определяются типом данных</li>
+                    <li>Результат операции зависит от типа данных</li>
+                    <li>Тип переменной определяется в процессе выполнения</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide33">
+        <div>
+            <section>
+                <header>
+                    <h2>Проверка типа данных</h2>
+                </header>
+                <ol>
+                    <li>typeof</li>
+                    <li>Свойство constructor</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide34">
+        <div>
+            <section>
+                <header>
+                    <h2>Литералы</h2>
+                </header>
+                <p>Значение, указанное непосредственно в тексте программы</p>
+                <p>Большинство типов данных в JS имеют литеральную форму записи</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide35">
+        <div>
+            <section>
+                <header>
+                    <h2><a href="">Основные типы данных</a></h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide36">
+        <div>
+            <section>
+                <header>
+                    <h2>Операторы</h2>
+                </header>
+                <p>Фраза на языке JavaScript, которая может быть вычислена для получения значения</p>
+                <pre>
+                    <code>var i = 2,</code>
+                    <code>    sum = i+i,</code>
+                    <code>    e = "JS power";</code>
+                    <code>(i + 1.7) * sum + typeof e</code>
+                    <code>// 14.8string</code>
+                </pre> 
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide37">
+        <div>
+            <section>
+                <header>
+                    <h2>Арифметические операторы</h2>
+                </header>
+                <ol>
+                    <li>Сложение</li>
+                    <li>Вычитание</li>
+                    <li>Умножение</li>
+                    <li>Деление</li>
+                    <li>Остаток от деления</li>
+                    <li>Инкремент</li>
+                    <li>Декремент</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide38">
+        <div>
+            <section>
+                <header>
+                    <h2>Операторы присвоения</h2>
+                </header>
+                <ol>
+                    <li>Простое присвоение</li>
+                    <li>Комбинированное присвоение</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide39">
+        <div>
+            <section>
+                <header>
+                    <h2>Операторы сравнения</h2>
+                </header>
+                <ol>
+                    <li>a == b</li>
+                    <li>a != b</li>
+                    <li>a === b</li>
+                    <li>a > b</li>
+                    <li>a < b</li>
+                    <li>a >= b</li>
+                    <li>a <= b</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide40">
+        <div>
+            <section>
+                <header>
+                    <h2>Логические операторы</h2>
+                </header>
+                <ol>
+                    <li>a && b</li>
+                    <li>a || b</li>
+                    <li>!a</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide41">
+        <div>
+            <section>
+                <header>
+                    <h2>Логическое И (&&)</h2>
+                </header>
+                <p>Возвращает <strong>true</strong>, если <code>и</code> левое, <code>и</code> правое значения возвращают true</p>
+                <ul>
+                    <li>var a = 1, b =0; c = a && b; <code>// c = false</code></li>
+                    <li>var a = 0, b =1; c = a && b; <code>// c = false</code></li>
+                    <li>var a = 1, b =1; c = a && b; <code>// c = true</code></li>
+                    <li>var a = 0, b =0; c = a && b; <code>// c = false</code></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide42">
+        <div>
+            <section>
+                <header>
+                    <h2>Логическое ИЛИ (||)</h2>
+                </header>
+                <p>Возвращает <strong>true</strong>, если <code>или</code> левое, <code>или</code> правое значения возвращают <strong>true</strong></p>
+                <ul>
+                    <li>var a = 1, b =0; c = a || b; <code>// c = true</code></li>
+                    <li>var a = 0, b =1; c = a || b; <code>// c = true</code></li>
+                    <li>var a = 1, b =1; c = a || b; <code>// c = true</code></li>
+                    <li>var a = 0, b =0; c = a || b; <code>// c = false</code></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide43">
+        <div>
+            <section>
+                <header>
+                    <h2>Логическое НЕТ (!var)</h2>
+                </header>
+                <p>Возвращает <code>true</code>, если операнд ложен</p>
+                <ul>
+                    <li>var a = 1; c = !a; <code>// c = false</code></li>
+                    <li>var a = 0; c = !a; <code>// c = true</code></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+	<!--
+		Эта возможность находится в разработке!
+		
+		Добавьте класс «inner» к любому родительскому
+		элементу для того, чтобы обозначить блок
+		внутренней навигации. Нажатие кнопки «следующий»
+		добавит класс «active» каждому последующему
+		ребёнку, начиная с первого.
+
+		Конкретное поведение зависит от стилей
+		текущей темы: элемент в активном состоянии
+		может быть показан, будучи предварительно спрятан,
+		либо вы можете выделить его, к примеру, цветом
+		или полужирным начертанием.
+
+		Для того, чтобы начать слайд с первого активного
+		элемента, добавьте класс «active» вручную.
+
+		После активации последнего элемента, нажатие
+		кнопки «следующий» переключит следующий слайд.
+
+	<div class="slide" id="InnerNavigation"><div>
+		<section>
+			<header>
+				<h2>Внутренняя навигация</h2>
+			</header>
+			<ol class="inner">
+				<li class="active">This tool is provided</li>
+				<li>Without warranty, guarantee</li>
+				<li>Or much in the way of explanation
+				<li>Erase your hard drive.</li>
+			</ol>
+		</section>
+	</div></div> -->
+	<!--
+		Для того, чтобы убрать индикатор прогресса
+		из презентации, просто удалите элемент «progress».
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../../../shower/scripts/script.js"></script>
+	<!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
+</body>
+</html>

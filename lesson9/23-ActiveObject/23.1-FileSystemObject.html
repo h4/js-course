@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FileSystemObject</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script type="text/javascript">
+        var fso = new ActiveXObject("Scripting.FileSystemObject"); // Создаем объект
+        var file = fso.CreateTextFile("c:\\test.txt", true);	    // Создаем файл
+        file.WriteLine("This is a test.");			                // Выводим в него строку
+        file.Close();						                        // Закрываем файл
+
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        fso.CreateFolder("c:\\New Folder");
+
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var ts = fso.OpenTextFile("c:\\file.txt", 8);
+        ts.WriteLine("Тестовая строка.");
+        ts.Close();
+
+    </script>
+</head>
+<body>
+<h1>FileSystemObject</h1>
+</body>
+</html>

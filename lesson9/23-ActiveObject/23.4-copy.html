@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Копирование файлов</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script type="text/javascript">
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var f = fso.GetFile("c:\\config.sys");
+        f.Copy("d:\\Temp");
+    </script>
+</head>
+<body>
+<h1>Копирование файлов</h1>
+</body>
+</html>
