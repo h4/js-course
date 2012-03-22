@@ -29,66 +29,7 @@
     	</div>
     </div>
 
-    <div class="slide" id="slide8">
-        <div>
-            <section>
-                <header>
-                    <h2>Типы данных</h2>
-                </header>
-                <p>Элементарные (простые) типы данных</p>
-                <ol>
-                    <li><strong>string</strong> - строка</li>
-                    <li><strong>number</strong> - число</li>
-                    <li><strong>boolean</strong> - логическое</li>
-                    <li><strong>null</strong> - null</li>
-                    <li><strong>undefined</strong> - значение отсутствует</li>
-                </ol>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide10">
-        <div>
-            <section>
-                <header>
-                    <h2>Объекты</h2>
-                </header>
-                <p><strong>Объект</strong> - основной тип данных в JavaScript.</p>
-            </section>
-        </div>
-    </div>
-    <div class="slide shout" id="slide11">
-        <div>
-            <section>
-                <header>
-                    <h2>В JS всё – объект</h2>
-                </header>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide12">
-        <div>
-            <section>
-                <header>
-                    <h2>Примитиыне типы — тоже объекты</h2>
-                </header>
-                <ul>
-                    <li><em>alert</em> (typeof ("0"));</li>
-                    <li><em>alert</em> (typeof (String("0")));</li>
-                    <li><em>alert</em> (typeof (<code>new</code> String("0")));</li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide13">
-        <div>
-            <section>
-                <header>
-                    <h2>Исключения</h2>
-                </header>
-                <p>Undefined – не объект</p>
-            </section>
-        </div>
-    </div>
+    
     <div class="slide" id="slide17">
         <div>
             <section>
@@ -342,6 +283,125 @@
                 <ol>
                     <li>Переход к следующей итерации цикла</li>
                 </ol>
+            </section>
+        </div>
+    </div>
+    
+    <div class="slide" id="slide19">
+        <div>
+            <section>
+                <header>
+                    <h2>Функции</h2>
+                </header>
+                <p>Функция – последовательность команд, которую можно использовать повторно.</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide20">
+        <div>
+            <section>
+                <header>
+                    <h2>Определение функции</h2>
+                </header>
+                <pre>
+                    <code><em>function</em> <strong>speakBot</strong>() {</code>
+                    <code>    <mark>var</mark> msg;</code>
+                    <code>    msg = prompt("Скажи что нибудь", "");</code>
+                    <code>    alert("Ты сказал" + msg);</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide21">
+        <div>
+            <section>
+                <header>
+                    <h2>Вызов функции</h2>
+                </header>
+                <pre>
+                    <code>speakBot();</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide22">
+        <div>
+            <section>
+                <header>
+                    <h2>Параметры функции</h2>
+                </header>
+                <pre>
+                    <code>function speakBot(<mark>name</mark>) {</code>
+                    <code>    var msg;</code>
+                    <code>    msg = prompt("Скажи что нибудь", "");</code>
+                    <code>    alert(<mark>name</mark> + " сказал " + msg);</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide23">
+        <div>
+            <section>
+                <header>
+                    <h2>Параметры функции</h2>
+                </header>
+                <pre>
+                    <code>var name = prompt("Как тебя зовут?", "Кто-то");</code>
+                    <code>speakBot(name);</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide24">
+        <div>
+            <section>
+                <header>
+                    <h2>Возвращаемое значение</h2>
+                </header>
+                <pre>
+                    <code>function addTax(price, tax) {</code>
+                    <code>    var result = price * (1 + tax / 100);</code>
+                    <code>    <mark>return</mark> result;</code>
+                    <code>}</code>
+                    <code>alert(addTax(235, 12.3));</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide25">
+        <div>
+            <section>
+                <header>
+                    <h2>Область видимости переменной</h2>
+                </header>
+                <ul>
+                    <li>Глобальная
+                        <ul>
+                            <li>Переменная доступна для чтения и <code>записи</code> в любой точке сценария</li>
+                        </ul>
+                    </li>
+                    <li>Локальная
+                        <ul>
+                            <li>Переменная доступна только внутри функции</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide26">
+        <div>
+            <section>
+                <header>
+                    <h2>Типы функций</h2>
+                </header>
+                <ul>
+                    <li>Именованные</li>
+                    <li>Анонимные</li>
+                </ul>
+                <p>Отличия – способ создания и «область» доступности</p>
             </section>
         </div>
     </div>
