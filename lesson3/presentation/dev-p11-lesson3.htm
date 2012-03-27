@@ -16,18 +16,17 @@
 <body class="list">
     <header class="caption">
         <h1>Занятие 3</h1>
-        <p>Массивы. Функции</p>
+        <p>Объекты в JavaScript</p>
     </header>
-    <div class="slide bg" id="Cover"><div>
+    <div class="slide cover" id="Cover"><div>
         <section>
             <header>
-                <h2>Объекты. Массивы. Функции</h2>
+                <h2>Объекты в JS</h2>
             </header>
-            <img src="../../../shower/pictures/cover.jpg" alt="">
-            <!-- © John Carey, http://fiftyfootshadows.net/ -->
+            <img src="../../img/cover.jpg" alt="">
         </section>
     </div></div>
-    <div class="slide" id="slide8">
+    <div class="slide" id="slide1">
         <div>
             <section>
                 <header>
@@ -44,7 +43,7 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide10">
+    <div class="slide" id="slide2">
         <div>
             <section>
                 <header>
@@ -54,7 +53,7 @@
             </section>
         </div>
     </div>
-    <div class="slide shout" id="slide11">
+    <div class="slide shout" id="slide3">
         <div>
             <section>
                 <header>
@@ -63,11 +62,11 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide12">
+    <div class="slide" id="slide4">
         <div>
             <section>
                 <header>
-                    <h2>Примитиыне типы — тоже объекты</h2>
+                    <h2>Примитивные типы — тоже объекты</h2>
                 </header>
                 <ul>
                     <li><em>alert</em> (typeof ("0"));</li>
@@ -77,27 +76,17 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide13">
+    <div class="slide" id="slide5">
         <div>
             <section>
                 <header>
                     <h2>Исключения</h2>
                 </header>
-                <p>Undefined – не объект</p>
+                <p><code>undefined</code> – не объект</p>
             </section>
         </div>
     </div>
-    <div class="slide" id="slide1">
-        <div>
-            <section>
-                <header>
-                    <h2>Объекты</h2>
-                </header>
-                <p>Основной тип данных в JavaScript</p>
-            </section>
-        </div>
-    </div>
-    <div class="slide bg" id="slide2">
+    <div class="slide cover w" id="slide6">
         <div>
             <section>
                 <header>
@@ -107,7 +96,36 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide3">
+    <div class="slide" id="slide7">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект</h2>
+                </header>
+                <ol>
+                    <li>Cоставной (сложные) <mark>типы данных</mark></li>
+                    <li>Неупорядоченная коллекция <em>свойств</em> (ассоциативный массив, хеш)</li>
+                    <li>Свойство имеет имя и значение</li>
+                    <li>Значение свойства может быть любого типа</li>
+                    <li>Объекты могут взаимодействовать друг с другом</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide8">
+        <div>
+            <section>
+                <header>
+                    <h2>Атрибуты объекта</h2>
+                </header>
+                <ul>
+                    <li>Свойства</li>
+                    <li>Методы</li>
+                </ul>
+            </section>
+        </div>
+    </div>    
+    <div class="slide" id="slide9">
         <div>
             <section>
                 <header>
@@ -116,13 +134,13 @@
                 <pre>
                     <code>var rabbit = new Object();</code>
                     <code>rabbit.size = "small";</code>
-                    <code>rabbit.isBird = false;</code>
-                    <code>rabbit.footsCount = 4;</code>
+                    <code>rabbit.isPredator = false;</code>
+                    <code>rabbit.legs = 4;</code>
                 </pre>
             </section>
         </div>
     </div>
-    <div class="slide" id="slide4">
+    <div class="slide" id="slide10">
         <div>
             <section>
                 <header>
@@ -138,7 +156,16 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide5">
+    <div class="slide shout" id="slide11">
+        <div>
+            <section>
+                <header>
+                    <h2>Метод&nbsp;&mdash; функция</h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide12">
         <div>
             <section>
                 <header>
@@ -151,178 +178,21 @@
             </section>
         </div>
     </div>
-    <div class="slide shout" id="slide18">
-        <div>
-            <section>
-                <header>
-                    <h2>Массивы передаются по ссылке</h2>
-                </header>
-            </section>
-        </div>
-    </div>
-    <div class="slide shout" id="slide27">
-        <div>
-            <section>
-                <header>
-                    <h2>Методы объектов&nbsp;&mdash; функции</h2>
-                </header>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide28">
-        <div>
-            <section>
-                <header>
-                    <h2>События</h2>
-                </header>
-                <ul>
-                    <li>Что произошло?</li>
-                    <li>Где произошло?</li>
-                    <li>Что делать?</li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="slide shout" id="slide29">
-        <div>
-            <section>
-                <header>
-                    <h2><span style="font-size:0.9em;">Кроссбраузерность</span> <nobr>;(</nobr></h2>
-                </header>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide30">
-        <div>
-            <section>
-                <header>
-                    <h2>Обработка событий</h2>
-                </header>
-                <ul>
-                    <li>Аттрибуты html-элементов</li>
-                    <li>Свойство DOM-элемента</li>
-                    <li>Специальные методы
-                        <ul>
-                            <li>attachEvent()</li>
-                            <li>addEventListener()</li>
-                        </ul>
-                    </li>
-                    <li>Использование JS-библиотек</li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide31">
-        <div>
-            <section>
-                <header>
-                    <h2>Обработчик события</h2>
-                </header>
-                <ul>
-                    <li>Событие <code>click</code></li>
-                    <li>Обработчик <code>on</code>click</li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide32">
-        <div>
-            <section>
-                <header>
-                    <h2>Объект Event</h2>
-                </header>
-                <ul>
-                    <li>Создаётся в момент возникновения события</li>
-                    <li>Содержит в себе информацию о событии</li>
-                    <li>Имеет отличия в разных браузерах</li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="slide shout" id="slide33">
-        <div>
-            <section>
-                <header>
-                    <h2>Интерактивность == События</h2>
-                </header>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide34">
-        <div>
-            <section>
-                <header>
-                    <h2>Всплытие событий</h2>
-                </header>
-                <pre>
-                    <code>&lt;div class=&quot;d3&quot; <mark>onclick</mark>=&quot;<mark>highlight</mark>(<strong>this</strong>)&quot;&gt;</code>
-                </pre>
-                <pre>
-                    <code>function highlight(elem) {</code>
-                    <code>    elem.style.backgroundColor='yellow';</code>
-                    <code>    alert(elem.className);</code>
-                    <code>    elem.style.backgroundColor = '';</code>
-                    <code>}</code>
-                </pre>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide35">
-        <div>
-            <section>
-                <header>
-                    <h2>Всплытие событий</h2>
-                </header>
-                <img src="i/bubblingEls.png" alt=""></section>
-        </div>
-    </div>
-    <div class="slide" id="slide36">
-        <div>
-            <section>
-                <header>
-                    <h2>Всплытие событий</h2>
-                </header>
-                <img src="i/event-order-bubbling.gif" alt=""></section>
-        </div>
-    </div>
-    <div class="slide" id="slide37">
-        <div>
-            <section>
-                <header>
-                    <h2>Объект</h2>
-                </header>
-                <p>Основной тип данных в JS</p>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide38">
-        <div>
-            <section>
-                <header>
-                    <h2>Особенности объектов</h2>
-                </header>
-                <ul>
-                    <li>Объект – ассоциативный массив (словарь, хеш)</li>
-                    <li>Основа ООП</li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide39">
+    <div class="slide" id="slide13">
         <div>
             <section>
                 <header>
                     <h2>Создание объекта</h2>
                 </header>
                 <ul>
-                    <li>Оператор new Object</li>
+                    <li>Оператор <code>new</code> конструктора Object</li>
                     <li>Литеральная форма</li>
                     <li>Использование конструктора</li>
                 </ul>
             </section>
         </div>
     </div>
-    <div class="slide" id="slide40">
+    <div class="slide" id="slide14">
         <div>
             <section>
                 <header>
@@ -330,6 +200,7 @@
                 </header>
                 <pre>
                     <code>var rabbit = <mark>new</mark> Object();</code>
+                    <code>// создаётся <mark>пустой</mark> объект</code>
                     <code>rabbit.legs = 4;</code>
                     <code>rabbit.size = "small";</code>
                     <code>alert(rabbit);</code>
@@ -338,11 +209,11 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide41">
+    <div class="slide" id="slide15">
         <div>
             <section>
                 <header>
-                    <h2>Создание объекта</h2>
+                    <h2>Создание объекта. Литеральная форма</h2>
                 </header>
                 <pre>
                     <code>var rabbit = <mark>{</mark></code>
@@ -355,7 +226,176 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide42">
+    <div class="slide" id="slide16">
+        <div>
+            <section>
+                <header>
+                    <h2>Литеральная форма</h2>
+                </header>
+                <ul>
+                    <li>Присвоение значений свойствам в момент создания</li>
+                    <li>Лёгкость чтения кода</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide17">
+        <div>
+            <section>
+                <header>
+                    <h2>Обращение к свойствам объекта</h2>
+                </header>
+                <pre>
+                    <code>console.log(rabbit.legs);</code>
+                    <code>console.log(rabbit["legs"]);</code>
+                </pre>
+                <pre>
+                    <code>var attrVal = "size";</code>
+                    <code>console.log(rabbit.attrVal);</code>
+                    <code>console.log(rabbit[attrVal]);</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide18">
+        <div>
+            <section>
+                <pre>
+                    <code>var rabbit = {</code>
+                    <code>    legs: 4,</code>
+                    <code>    size: 'small',</code>
+                    <code>    eat: function (obj) {</code>
+                    <code>        return "I eat " + obj;</code>
+                    <code>        }</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide19">
+        <div>
+            <section>
+                <pre>
+                    <code>var wolf = {</code>
+                    <code>    legs: 4,</code>
+                    <code>    size: 'medium',</code>
+                    <code>    eat: function (obj) {</code>
+                    <code>        return "I eat " + obj;</code>
+                    <code>        }</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide20">
+        <div>
+            <section>
+                <pre>
+                    <code>var animal = {</code>
+                    <code>    legs: 4,</code>
+                    <code>    eat: function (obj) {</code>
+                    <code>        return "I eat " + obj;</code>
+                    <code>        }</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide21">
+        <div>
+            <section>
+                <header>
+                    <h2>Конструктор объекта</h2>
+                </header>
+                <pre>
+                    <code>function Animal(objName, objSize) {</code>
+                    <code>    <mark>this</mark>.name = objName;</code>
+                    <code>    this.legs = 4;</code>
+                    <code>    this.size = objSize;</code>
+                    <code>    this.eat = <mark>function</mark>(obj) {</code>
+                    <code>        return "I eat " + obj;</code>
+                    <code>    };</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide22">
+        <div>
+            <section>
+                <header>
+                    <h2>Создание объекта из конструктора</h2>
+                </header>
+                <pre>
+                    <code>var rabbit = <mark>new</mark> Animal("rabbit", "small"),</code>
+                    <code>    wolf = new Animal("wolf", "medium");</code>
+                    <code> </code>
+                    <code>wolf.eat(rabbit);</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide23">
+        <div>
+            <section>
+                <header>
+                    <h2>Констуктор</h2>
+                </header>
+                <ul>
+                    <li>Функция, возращающая объект</li>
+                    <li>Объект возвращается явно (<code>return {}</code>) или при помощи оператора <code>this</code></li>
+                    <li>Имя конструктора принято писать с заглавной буквы</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide24">
+        <div>
+            <section>
+                <header>
+                    <h2>Оператор this</h2>
+                </header>
+                <ul>
+                    <li>Указывает на текущий объект</li>
+                    <li>В глобальной области видимости указывает на глобальный объект</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide25">
+        <div>
+            <section>
+                <header>
+                    <h2>Прототип конструктора</h2>
+                </header>
+                <pre>
+                    <code>function Animal(objName, objSize) {</code>
+                    <code>    this.name = objName;</code>
+                    <code>    this.legs = 4;</code>
+                    <code>    this.size = objSize;</code>
+                    <code>}</code>
+                    <code>Animal.<mark>prototype</mark>.eat = function(obj) {</code>
+                    <code>    return "I eat " + obj;</code>
+                    <code>};</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide26">
+        <div>
+            <section>
+                <header>
+                    <h2>Прототип конструктора</h2>
+                </header>
+                <ol>
+                    <li>Свойства прототипа конструктора доступны для всех объектов, созданных этим конструктором</li>
+                    <li>Значения свойсв прототипа одинаковы для всех порождённых объектов</li>
+                    <li>Чаще всего в прототипе определяют функции</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide27">
         <div>
             <section>
                 <header>
@@ -368,7 +408,7 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide43">
+    <div class="slide" id="slide28">
         <div>
             <section>
                 <header>
@@ -384,7 +424,7 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide44">
+    <div class="slide" id="slide29">
         <div>
             <section>
                 <header>
@@ -400,12 +440,224 @@
             </section>
         </div>
     </div>
-    <div class="slide shout" id="slide45">
+    <div class="slide" id="slide30">
         <div>
             <section>
                 <header>
-                    <h2>Встренные объекты пишутся с заглавной буквы</h2>
+                    <h2>Объект Date</h2>
                 </header>
+                <ul>
+                    <li>Встроенный объект JavaScript</li>
+                    <li>Предоставляет инструменты для работы с датой и временем</li>
+                    <li>Объекты создаются конструктором <code>new Date()</code></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide31">
+        <div>
+            <section>
+                <header>
+                    <h2>Создание экземпляра объекта Date</h2>
+                </header>
+                <ul>
+                    <li>var today = new Date();</li>
+                    <li>var wwii_start = new Date("September 1, 1939 04:45 AM"); </li>
+                    <li>var wwii_end = new Date(1945, 9, 2, 9, 2);</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide32">
+        <div>
+            <section>
+                <header>
+                    <h2>new Date();</h2>
+                </header>
+                <h3 id="slideDate"></h3>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide33">
+        <div>
+            <section>
+                <header>
+                    <h2>new Date("May 21, 1958 10:15 AM");</h2>
+                </header>
+                <h3>Wed May 21 1958 10:15:00 GMT+0400 (MSK)</h3>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide34">
+        <div>
+            <section>
+                <header>
+                    <h2>new Date(1958, 4, 21, 10, 15);</h2>
+                </header>
+                <h3>Wed May 21 1958 10:15:00 GMT+0400 (MSK)</h3>
+                <ul>
+                    <li>Год, месяц, день, час, минута, день</li>
+                    <li>Месяц – начинается с «0»</li>
+                    <li>Можно добавить 6-й параметр</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide35">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства объекта Date()</h2>
+                </header>
+                <p>У объекта нет свойств</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide36">
+        <div>
+            <section>
+                <header>
+                    <h2>Методы объекта Date()</h2>
+                </header>
+                <p>Более 40 свойств</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide37">
+        <div>
+            <section>
+                <header>
+                    <h2>Методы объекта Date()</h2>
+                </header>
+                <ul>
+                    <li>get<em>Prop</em>() - возвращает значение, не имеет аргументов
+                        <ul>
+                            <li>getFullYear()</li>
+                            <li>getMilliseconds()</li>
+                        </ul>
+                    </li>
+                    <li>set<em>Prop</em>(args) - устанавливает значение, переданное в аргументе
+                        <ul>
+                            <li>Date.setFullYear(<code>year</code>, month, day)</li>
+                        </ul>
+                    </li>
+                    <li>Прочие методы</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide38">
+        <div>
+            <section>
+                <header>
+                    <h2>setTimeout(func|code, timeout)</h2>
+                </header>
+                <ol>
+                    <li>Выполняет JS код (<code>func|code</code>) через  указанный промежуток времени (<code>timeout</code>)</li>
+                    <li>Промежуток времени задаётся в миллисекундах</li>
+                    <li>Код выполняется один раз</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide39">
+        <div>
+            <section>
+                <header>
+                    <h2>setTimeout(func|code, milliseconds)</h2>
+                </header>
+                <ul>
+                    <li>Глобальный метод (в браузере)</li>
+                    <li>func – имя выполняемой функции
+                        <ul>
+                            <li>function myFunc() {...};</li>
+                            <li>var t = setTimeout(<code>myFunc</code>, 1000);</li>
+                        </ul>
+                    </li>
+                    <li>code – строка кода
+                        <ul>
+                            <li>var t = setTimeout('alert("hello");', 1000);</li>
+                        </ul></li>
+                    <li>Обычно создаётся как значение переменной</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide40">
+        <div>
+            <section>
+                <header>
+                    <h2>setInterval(func|code, milliseconds)</h2>
+                </header>
+                <p>Выполняет JS код через равные промежутки времени</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide41">
+        <div>
+            <section>
+                <header>
+                    <h2>Остановка выполнения интервалов</h2>
+                </header>
+                <pre>
+                    <code>var t = setTimeout(killBill, 1000),</code>
+                    <code>    bill = setInterval(living, 50);</code>
+                    <code>function killBill () {</code>
+                    <code>    clearInterval(bill);</code>
+                    <code>    console.log("Bye, Bill");</code>
+                    <code>}</code>
+                    <code>function living() { console.log("I'm alive"); }</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide42">
+        <div>
+            <section>
+                <header>
+                    <h2>Отсчёт от времени на клиенте</h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide43">
+        <div>
+            <section>
+                <header>
+                    <h2>Точность зависит от загрузки компьютера</h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide44">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект Math</h2>
+                </header>
+                <ul>
+                    <li>Предоставляет инструментарий для вычислений</li>
+                    <li>Не может использоваться как конструктор</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide45">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства объекта Math — константа</h2>
+                </header>
+                <ul>
+                    <li>E. <code>console.log(Math.E);</code></li>
+                    <li>PI. <code>console.log(Math.PI);</code></li>
+                    <li>SQRT2. <code>console.log(Math.SQRT2);</code></li>
+                    <li>SQRT1_2</li>
+                    <li>LN10</li>
+                    <li>LN2</li>
+                    <li>LOG10E</li>
+                    <li>LOG2E</li>
+                </ul>
             </section>
         </div>
     </div>
@@ -413,14 +665,17 @@
         <div>
             <section>
                 <header>
-                    <h2>Обращение к свойствам объекта</h2>
+                    <h2>Методы объекта Math</h2>
                 </header>
-                <pre>
-                    <code>alert(rabbit.legs);</code>
-                    <code>alert(rabbit["legs"]);</code>
-                    <code>var attrVal = "size";</code>
-                    <code>alert(rabbit[attrVal]);</code>
-                </pre>
+                <ul>
+                    <li>Math.abs()</li>
+                    <li>Math.floor()</li>
+                    <li>Math.ceil()</li>
+                    <li>Math.round()</li>
+                    <li>Math.max()</li>
+                    <li>Math.sqrt()</li>
+                    <li>Math.cos()</li>
+                </ul>
             </section>
         </div>
     </div>
@@ -428,17 +683,12 @@
         <div>
             <section>
                 <header>
-                    <h2>Конструктор объекта</h2>
+                    <h2>Случайное число</h2>
                 </header>
                 <pre>
-                    <code>function animal(objName, objLegs, objSize, objRunMethod) {</code>
-                    <code>    <mark>this</mark>.name = objName;</code>
-                    <code>    this.legs = objLegs;</code>
-                    <code>    this.size = objSize;</code>
-                    <code>    this.runMethod = objRunMethod;</code>
-                    <code>    this.run = <mark>function()</mark> {alert(this.runMethod)};</code>
-                    <code>}</code>
+                    <code>rand = Math.random();</code>
                 </pre>
+                <p id="random"></p>
             </section>
         </div>
     </div>
@@ -446,14 +696,14 @@
         <div>
             <section>
                 <header>
-                    <h2>Создание объекта из конструктора</h2>
+                    <h2>Случайное число</h2>
                 </header>
                 <pre>
-                    <code>var rabbit = <mark>new</mark> animal("rabbit", 4, "small", "jump"),</code>
-                    <code>    wolf = new animal("wolf", 4, "medium", "walk");</code>
-                    <code> </code>
-                    <code>rabbit.run();</code>
+                    <code>var limit = 1000,</code>
+                    <code>    rand;</code>
+                    <code>rand = Math.floor(Math.random() * limit);</code>
                 </pre>
+                <p id="randomLimited"></p>
             </section>
         </div>
     </div>
@@ -461,16 +711,120 @@
         <div>
             <section>
                 <header>
-                    <h2>Оператор this</h2>
+                    <h2>Объект String</h2>
                 </header>
-                <ul>
-                    <li>Указывает на текущий объект</li>
-                    <li>В глобальной области видимости указывает на глобальный объект</li>
-                </ul>
+                <ol>
+                    <li>Предоставляет методы работы со строками</li>
+                    <li>Как констуктор используется редко</li>
+                    <li>Свойства и методы доступны для переменных-литералов</li>
+                </ol>
             </section>
         </div>
     </div>
     <div class="slide" id="slide50">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект String</h2>
+                </header>
+                <p>Свойства</p>
+                <ol>
+                    <li>"Объект".length</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide51">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект String</h2>
+                </header>
+                <p>Методы</p>
+                <ol>
+                    <li>Поиск символов в строке</li>
+                    <li>Извлечение подстроки</li>
+                    <li>Преобразование строки/li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide52">
+        <div>
+            <section>
+                <header>
+                    <h2>Валидация email</h2>
+                </header>
+                <pre>
+                    <code>function validate(str) {</code>
+                    <code>    var strLen = str.length,</code>
+                    <code>        atPosition = str.indexOf("@");</code>
+                    <code>    if(strLen === 0) return false;</code>
+                    <code>    if(atPosition &lt; 1 || atPosition === (strLen-1)) {</code>
+                    <code>        return false;</code>
+                    <code>    }</code>
+                    <code>}</code>
+                </code>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide53">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект RegExp()</h2>
+                </header>
+                <p>Инструменты для работы с регулярными выражениями</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide54">
+        <div>
+            <section>
+                <header>
+                    <h2>Создание объекта RegExp</h2>
+                </header>
+                <pre>
+                    <code>reObj = new RegExp("pattern");</code>
+                    <code>regLit = /pattern/;</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide55">
+        <div>
+            <section>
+                <header>
+                    <h2>Методы объекта RegExp</h2>
+                </header>
+                <ol>
+                    <li>re.test( str );</li>
+                    <li>re.exec( str );</li>
+                </ol>
+                <pre>
+                    <code>re = /pattern/i;</code>
+                    <code>re.test('myPattern'); //true</code>
+                    <code>re.exec('myPattern'); //["Pattern"]</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide56">
+        <div>
+            <section>
+                <header>
+                    <h2>Шаблоны регулярных выражений</h2>
+                </header>
+                <ol>
+                    <li>Последовательности</li>
+                    <li>Группировка</li>
+                    <li>Повторения</li>
+                    <li>Положение в строке</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
         <div>
             <section>
                 <header>
@@ -485,20 +839,6 @@
                     <code>alert("Hello");</code>
                     <code>window.alert("Hello");</code>
                 </pre>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide51">
-        <div>
-            <section>
-                <header>
-                    <h2>Прототип объекта</h2>
-                </header>
-                <ul>
-                    <li>Свойство объекта</li>
-                    <li>Свойства прототипа передаются всем экземплярам объекта</li>
-                    <li>Одна из ключевых особенностей JS</li>
-                </ul>qui
             </section>
         </div>
     </div>
@@ -543,6 +883,26 @@
         -->
     <div class="progress"><div></div></div>
     <script src="../../../shower/scripts/script.js"></script>
+    <script type="text/javascript">(function() {
+        el = document.getElementById("slideDate");
+        function writeCurDate() {
+            var dtA = new Date();
+            el.innerHTML = dtA;
+        }
+        randEl = document.getElementById('random');
+        randomLimitedEl = document.getElementById('randomLimited');
+        function writeRand() {
+            var rand = Math.random();
+            randEl.innerHTML = rand;
+        }
+        function writeRand2() {
+            var rand = Math.floor(Math.random() * 1000);
+            randomLimitedEl.innerHTML = rand;
+        }
+        setInterval(writeCurDate, 1000);
+        setInterval(writeRand, 1000);
+        setInterval(writeRand2, 1000);
+    })();</script>
     <!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
 </body>
 </html>
