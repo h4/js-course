@@ -103,7 +103,7 @@
                     <h2>Объект</h2>
                 </header>
                 <ol>
-                    <li>Cоставной (сложные) <mark>типы данных</mark></li>
+                    <li>Cоставной (сложный) <mark>тип данных</mark></li>
                     <li>Неупорядоченная коллекция <em>свойств</em> (ассоциативный массив, хеш)</li>
                     <li>Свойство имеет имя и значение</li>
                     <li>Значение свойства может быть любого типа</li>
@@ -124,8 +124,21 @@
                 </ul>
             </section>
         </div>
-    </div>    
+    </div>
     <div class="slide" id="slide9">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства и методы объекта</h2>
+                </header>
+                <ul>
+                    <li>У встроенных объектов предопределённый набор свойств и методов</li>
+                    <li>Свойства и методы можно добавлять, изменять и удалять</li>
+                </ul>
+            </section>
+        </div>
+    </div>    
+    <div class="slide" id="slide10">
         <div>
             <section>
                 <header>
@@ -140,7 +153,7 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide10">
+    <div class="slide" id="slide11">
         <div>
             <section>
                 <header>
@@ -150,31 +163,18 @@
 
                 <pre>
                     <code>rabbit.getSize(); <mark>// "small"</mark></code>
-                    <code>rabbit.run(); <mark>// "Jump... Jump..."</mark></code>
+                    <code>rabbit.run();     <mark>// "Jump... Jump..."</mark></code>
                     <code>wolf.eat(rabbit);</code>
                 </pre>
             </section>
         </div>
     </div>
-    <div class="slide shout" id="slide11">
+    <div class="slide shout" id="slide12">
         <div>
             <section>
                 <header>
                     <h2>Метод&nbsp;&mdash; функция</h2>
                 </header>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide12">
-        <div>
-            <section>
-                <header>
-                    <h2>Свойства и методы объекта</h2>
-                </header>
-                <ul>
-                    <li>У встроенных объектов предопределённый набор свойств и методов</li>
-                    <li>Свойства и методы можно добавлять, изменять и удалять</li>
-                </ul>
             </section>
         </div>
     </div>
@@ -251,7 +251,7 @@
                 </pre>
                 <pre>
                     <code>var attrVal = "size";</code>
-                    <code>console.log(rabbit.attrVal);</code>
+                    <code>console.log(rabbit.attrVal); //undefined</code>
                     <code>console.log(rabbit[attrVal]);</code>
                 </pre>
             </section>
@@ -389,7 +389,7 @@
                 </header>
                 <ol>
                     <li>Свойства прототипа конструктора доступны для всех объектов, созданных этим конструктором</li>
-                    <li>Значения свойсв прототипа одинаковы для всех порождённых объектов</li>
+                    <li>Значения свойств прототипа одинаковы для всех порождённых объектов</li>
                     <li>Чаще всего в прототипе определяют функции</li>
                 </ol>
             </section>
@@ -519,7 +519,7 @@
                 <header>
                     <h2>Методы объекта Date()</h2>
                 </header>
-                <p>Более 40 свойств</p>
+                <p>Более 40 методов</p>
             </section>
         </div>
     </div>
@@ -550,7 +550,7 @@
         <div>
             <section>
                 <header>
-                    <h2>setTimeout(func|code, timeout)</h2>
+                    <h2>setTimeout ( func|code, timeout )</h2>
                 </header>
                 <ol>
                     <li>Выполняет JS код (<code>func|code</code>) через  указанный промежуток времени (<code>timeout</code>)</li>
@@ -564,7 +564,7 @@
         <div>
             <section>
                 <header>
-                    <h2>setTimeout(func|code, milliseconds)</h2>
+                    <h2>setTimeout ( func|code, milliseconds )</h2>
                 </header>
                 <ul>
                     <li>Глобальный метод (в браузере)</li>
@@ -587,7 +587,7 @@
         <div>
             <section>
                 <header>
-                    <h2>setInterval(func|code, milliseconds)</h2>
+                    <h2>setInterval ( func|code, milliseconds )</h2>
                 </header>
                 <p>Выполняет JS код через равные промежутки времени</p>
             </section>
@@ -601,9 +601,9 @@
                 </header>
                 <pre>
                     <code>var t = setTimeout(killBill, 1000),</code>
-                    <code>    bill = setInterval(living, 50);</code>
+                    <code>    <mark>bill</mark> = setInterval(living, 50);</code>
                     <code>function killBill () {</code>
-                    <code>    clearInterval(bill);</code>
+                    <code>    clearInterval(<mark>bill</mark>);</code>
                     <code>    console.log("Bye, Bill");</code>
                     <code>}</code>
                     <code>function living() { console.log("I'm alive"); }</code>
@@ -668,13 +668,13 @@
                     <h2>Методы объекта Math</h2>
                 </header>
                 <ul>
-                    <li>Math.abs()</li>
-                    <li>Math.floor()</li>
-                    <li>Math.ceil()</li>
-                    <li>Math.round()</li>
-                    <li>Math.max()</li>
-                    <li>Math.sqrt()</li>
-                    <li>Math.cos()</li>
+                    <li>Math.abs ( )</li>
+                    <li>Math.floor ( )</li>
+                    <li>Math.ceil ( )</li>
+                    <li>Math.round ( )</li>
+                    <li>Math.max ( )</li>
+                    <li>Math.sqrt ( )</li>
+                    <li>Math.cos ( )</li>
                 </ul>
             </section>
         </div>
@@ -744,7 +744,7 @@
                 <ol>
                     <li>Поиск символов в строке</li>
                     <li>Извлечение подстроки</li>
-                    <li>Преобразование строки/li>
+                    <li>Преобразование строки</li>
                 </ol>
             </section>
         </div>
@@ -772,7 +772,7 @@
         <div>
             <section>
                 <header>
-                    <h2>Объект RegExp()</h2>
+                    <h2>Объект RegExp</h2>
                 </header>
                 <p>Инструменты для работы с регулярными выражениями</p>
             </section>
@@ -785,8 +785,8 @@
                     <h2>Создание объекта RegExp</h2>
                 </header>
                 <pre>
-                    <code>reObj = new RegExp("pattern");</code>
-                    <code>regLit = /pattern/;</code>
+                    <code>reObj = new RegExp(<mark>"</mark>pattern<mark>"</mark>);</code>
+                    <code>regLit = <mark>/</mark>pattern<mark>/</mark>;</code>
                 </pre>
             </section>
         </div>
@@ -798,8 +798,8 @@
                     <h2>Методы объекта RegExp</h2>
                 </header>
                 <ol>
-                    <li>re.test( str );</li>
-                    <li>re.exec( str );</li>
+                    <li>re.test ( str );</li>
+                    <li>re.exec ( str );</li>
                 </ol>
                 <pre>
                     <code>re = /pattern/i;</code>
