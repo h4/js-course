@@ -16,20 +16,192 @@
 <body class="list">
     <header class="caption">
         <h1>Занятие 4</h1>
-        <p>Массивы. Функции</p>
+        <p>Объекты Error и Function. Глобальный объект. События</p>
     </header>
-    <div class="slide bg" id="Cover">
+    <div class="slide cover" id="Cover">
         <div>
             <section>
                 <header>
-                    <h2>Объекты Date, String, RegExp, Math. Объекты в браузере</h2>
+                    <h2>Объекты Error и Function. Глобальный объект. События</h2>
                 </header>
-                <img src="../../../shower/pictures/cover.jpg" alt="">
+                <img src="../../img/cover.jpg" alt="">
                 <!-- © John Carey, http://fiftyfootshadows.net/ -->
             </section>
         </div>
     </div>
-    
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект Error</h2>
+                </header>
+                <ul>
+                    <li>Браузер прерывает выполнение кода при возникновении ошибки</li>
+                    <li>Ошибку можно «поймать» и обработать</li>
+                    <li>Присвоение свойству объекта недопустимого значения</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Примеры ошибок</h2>
+                </header>
+                <ul>
+                    <li>Обращение к несуществующей переменной</li>
+                    <li>Вызов несуществующего метода</li>
+                    <li>Неправильное использование метода eval()</li>
+                    <li>Методу decodeURI передан неверный uri</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Обработка ошибок</h2>
+                </header>
+                <pre>
+                    <code>try {</code>
+                    <code>    // код, который может вызвать ошибку</code>
+                    <code>}</code>
+                    <code>catch (<mark>e</mark>) {</code>
+                    <code>    // обработка ошибки, </code>
+                    <code>    // доступ к экземпляру объекта Error</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Обработка ошибок</h2>
+                </header>
+                <ul>
+                    <li><a href="http://jsfiddle.net/h404/p85ht/1/">Пример №1</a></li>
+                    <li><a href="http://jsfiddle.net/h404/n8zzw/1/">Пример №2</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Создание объекта Error</h2>
+                </header>
+                <pre>
+                    <code>function getMonthName(month) {</code>
+                    <code>    var months=new Array("январь", .., "декабрь");</code>
+                    <code>    if (months[month - 1] != null)</code>
+                    <code>        return months[month];</code>
+                    <code>    else</code>
+                    <code>        throw new Error("Неверный месяц");</code>
+                    <code>    }</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Создание объекта Error</h2>
+                </header>
+                <pre>
+                    <code>try {</code>
+                    <code>    // возможно исключение</code>
+                    <code>    monthName = getMonthName(myMonth);</code>
+                    <code>}</code>
+                    <code>catch (e) {</code>
+                    <code>    monthName="неизвестно";</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект Function</h2>
+                </header>
+                <ul>
+                    <li>Как конструктор используется крайне редко</li>
+                    <li>Предоставляет доступ к полезным свойствам и методам</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства объекта Function</h2>
+                </header>
+                <ul>
+                    <li>arguments</li>
+                    <li>caller</li>
+                    <li>length</li>
+                    <li>prototype</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства объекта Function</h2>
+                </header>
+                <ul>
+                    <li>arguments - массив аргументов, переданных функции</li>
+                    <li>length - число формальных аргументов функции</li>
+                </ul>
+                <p><a hfre="http://jsfiddle.net/h404/s4a3g/">Пример</a></p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Методы объекта Function</h2>
+                </header>
+                <ul>
+                    <li>apply( )</li>
+                    <li>call( )</li>
+                    <li>toString( )</li>
+                </ul>
+                <p><a hfre="http://jsfiddle.net/h404/jVkmy/">Пример</a></p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide57">
+        <div>
+            <section>
+                <header>
+                    <h2>Методы <em>function</em>.apply и <em>function</em>.call</h2>
+                </header>
+                <pre>
+                    <code>function.apply(obj, args);</code>
+                    <code>function.call(obj, args);</code>
+                </pre>
+                <ul>
+                    <li>Вызывают функцию <em>function</em>, как метод объекта <em>obj</em></li>
+                    <li>apply принимает аргументы в виде массива</li>
+                    <li>call принимает произвольный набор аргументов</li>
+                </ul>
+                <p><a hfre="http://jsfiddle.net/h404/jVkmy/">Пример</a></p>
+            </section>
+        </div>
+    </div>
     <div class="slide" id="slide57">
         <div>
             <section>
@@ -45,6 +217,152 @@
                     <code>alert("Hello");</code>
                     <code>window.alert("Hello");</code>
                 </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slideN3">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект window</h2>
+                </header>
+                <ul>
+                    <li>Объект, представляющий окно браузера</li>
+                    <li>Глобальный объект</li>
+                    <li>Не может использоваться как конструктор</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide1">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства объекта window</h2>
+                </header>
+                <ul>
+                    <li>document</li>
+                    <li>history</li>
+                    <li>location</li>
+                    <li>navigator</li>
+                    <li>screen</li>
+                    <li>status</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide1">
+        <div>
+            <section>
+                <header>
+                    <h2>Методы объекта window</h2>
+                </header>
+                <ul>
+                    <li>alert( )</li>
+                    <li>setIntervar( ) *</li>
+                    <li>close( )</li>
+                    <li>focus( )</li>
+                    <li>print( )</li>
+                    <li>open( )</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide2">
+        <div>
+            <section>
+                <header>
+                    <h2>Создание нового окна</h2>
+                </header>
+                <pre><code>window.open(url, name, params, replace)</code></pre>
+                <p>url, name, params — строки</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide2">
+        <div>
+            <section>
+                <header>
+                    <h2>Создание нового окна</h2>
+                </header>
+                <pre>
+                    <code>function newWindow(h, w) {</code>
+                    <code>    var params, myWindow;</code>
+                    <code>    if (h) {params[] = 'height=' + h;}</code>
+                    <code>    if (w) {params[] = 'width=' + w;}</code>
+                    <code>    myWindow = window.open("","",params.toString());</code>
+                    <code>    myWindow.focus();</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide2">
+        <div>
+            <section>
+                <header>
+                    <h2>document</h2>
+                </header>
+                <ul>
+                    <li>свойство объекта window</li>
+                    <li>объект</li>
+                    <li>предоставляет доступ к элементам html-страницы</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide3">
+        <div>
+            <section>
+                <header>
+                    <h2>Цепочка свойств</h2>
+                </header>
+                <pre>
+                    <code>var d, i, i_src;</code>
+                    <code>d = window.document;</code>
+                    <code>i = document.images[0];</code>
+                    <code>i_src = i.src;</code>
+                </pre>
+                <pre>
+                    <code>var i_src = window.document.images[0].src;</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide4">
+        <div>
+            <section>
+                <header>
+                    <h2>Доступ к элементу страницы</h2>
+                </header>
+                <pre><code>document.getElementById(<mark>id</mark>)</code></pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide5">
+        <div>
+            <section>
+                <header>
+                    <h2>Коллекции (массивы)</h2>
+                </header>
+                <ul>
+                    <li>document.getElementsByTagName</li>
+                    <li>document.anchors</li>
+                    <li>document.forms</li>
+                    <li>document.images</li>
+                    <li>document.links</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide28">
+        <div>
+            <section>
+                <header>
+                    <h2>События</h2>
+                </header>
+                <p>Событие — основа динамических веб-страниц</p>
+                <p>Когда что-то происходит — браузер генерирует объект события, а программный код может обработать его при помощи <em>обработчика</em> события</p>
             </section>
         </div>
     </div>
@@ -66,8 +384,21 @@
         <div>
             <section>
                 <header>
-                    <h2><span style="font-size:0.9em;">Кроссбраузерность</span> <nobr>;(</nobr></h2>
+                    <h2><span style="font-size:0.8em;">Кроссбраузерность</span> <nobr>;(</nobr></h2>
                 </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide28">
+        <div>
+            <section>
+                <header>
+                    <h2>Типы событий</h2>
+                </header>
+                <ul>
+                    <li>Аппаратно-зависимые</li>
+                    <li>Аппаратно-независимые (семантические)</li>
+                </ul>
             </section>
         </div>
     </div>
@@ -104,6 +435,62 @@
             </section>
         </div>
     </div>
+    <div class="slide" id="slide31">
+        <div>
+            <section>
+                <header>
+                    <h2>Обработчик события</h2>
+                </header>
+                <ul>
+                    <li>Html-атрибут элемента</li>
+                    <li>Свойство DOM-элемента</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide31">
+        <div>
+            <section>
+                <header>
+                    <h2>Обработчик события</h2>
+                </header>
+                <ul>
+                    <li><a href="http://jsfiddle.net/h404/aFSGL/">Пример 1</a></li>
+                    <li><a href="http://jsfiddle.net/h404/aFSGL/1/">Пример 2</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide31">
+        <div>
+            <section>
+                <header>
+                    <h2>Возврат значения</h2>
+                </header>
+                <ul>
+                    <li>По клику на ссылку осуществляется переход</li>
+                    <li>При помощи js пожно блокировать этот переход</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide3112">
+        <div>
+            <section>
+                <header>
+                    <h2>Возврат значения</h2>
+                </header>
+                <pre>
+                    <code>&lt;a href="http://google.com/">Искать в Гугле&lt;/a></code>
+                    <code>&lt;a href="http://google.com/" </code>
+                    <code>    onclick="doSomething(); void 0;">Искать в Гугле&lt;/a></code>
+                    <code>&lt;a href="http://google.com/" </code>
+                    <code>    onclick="doSomething(); </code>
+                    <code>    return false;">Искать в Гугле&lt;/a></code>
+                </pre>
+            </section>
+        </div>
+    </div>
     <div class="slide" id="slide32">
         <div>
             <section>
@@ -118,12 +505,111 @@
             </section>
         </div>
     </div>
-    <div class="slide shout" id="slide33">
+    <div class="slide" id="slide32">
         <div>
             <section>
                 <header>
-                    <h2>Интерактивность == События</h2>
+                    <h2>Объект Event</h2>
                 </header>
+                <pre>
+                    <code>element.onclick = function(event) {</code>
+                    <code>    event = event || window.event</code>
+                    <code>    // Теперь событие - это объект события по всех браузерах.</code>
+                    <code>}</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide3112">
+        <div>
+            <section>
+                <header>
+                    <h2>Обработчик событий</h2>
+                </header>
+                <ul>
+                    <li>html-атрибут — избыточный и грязный код</li>
+                    <li>dom-атрибут — нельзя задать несколько функций обработчиков</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide32">
+        <div>
+            <section>
+                <header>
+                    <h2>Метод attachEvent</h2>
+                </header>
+                <ul>
+                    <li>Позволяет добавлять произвольное число функций обработчиков</li>
+                    <li>Можно динамически удалять обработчики</li>
+                    <li>Работает в IE &lt; 9</li>
+                </ul>
+                <pre>
+                    <code>element.attachEvent( "on"+event, handler);</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide32">
+        <div>
+            <section>
+                <header>
+                    <h2>Метод attachEvent</h2>
+                </header>
+                <pre>
+                    <code>var input = document.getElementById('button')</code>
+                    <code>function handler() {</code>
+                    <code>    // JS Code</code>
+                    <code>}</code>
+                    <code>input.attachEvent( "onclick" , handler);</code>
+                    <code>// Удаление обработчика</code>
+                    <code>input.detachEvent( "onclick", handler);</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide32">
+        <div>
+            <section>
+                <header>
+                    <h2>Метод addEventListener</h2>
+                </header>
+                <ul>
+                    <li>Позволяет добавлять произвольное число функций обработчиков</li>
+                    <li>Можно динамически удалять обработчики</li>
+                    <li>«Стандартный» метод обработки событий</li>
+                </ul>
+                <pre>
+                    <code>element.addEventListener( event, handler, phase);</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide32">
+        <div>
+            <section>
+                <header>
+                    <h2>Метод addEventListener</h2>
+                </header>
+                <pre>
+                    <code>var input = document.getElementById('button')</code>
+                    <code>function handler() {</code>
+                    <code>    // JS Code</code>
+                    <code>}</code>
+                    <code>input.addEventListener( "click" , handler, false);</code>
+                    <code>// Удаление обработчика</code>
+                    <code>input.removeEventListener( "click", handler, false);</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide32">
+        <div>
+            <section>
+                <header>
+                    <h2>Кроссбраузерный метод</h2>
+                </header>
+            <p><a href="http://jsfiddle.net/h404/gSgC8/">Пример</a></p>
             </section>
         </div>
     </div>
@@ -162,20 +648,6 @@
                     <h2>Всплытие событий</h2>
                 </header>
                 <img src="i/event-order-bubbling.gif" alt=""></section>
-        </div>
-    </div>
-    <div class="slide" id="slideN3">
-        <div>
-            <section>
-                <header>
-                    <h2>Объект window()</h2>
-                </header>
-                <ul>
-                    <li>Объект, представляющий окно браузера</li>
-                    <li>Глобальный объект</li>
-                    <li>Не может использоваться как конструктор</li>
-                </ul>
-            </section>
         </div>
     </div>
 
