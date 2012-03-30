@@ -36,9 +36,8 @@
                     <h2>Объект Error</h2>
                 </header>
                 <ul>
-                    <li>Браузер прерывает выполнение кода при возникновении ошибки</li>
-                    <li>Ошибку можно «поймать» и обработать</li>
-                    <li>Присвоение свойству объекта недопустимого значения</li>
+                    <li>При обнаружении ошибки браузер останавливает выполенение кода</li>
+                    <li>Не всегда ошибка критична для выполнения программы</li>
                 </ul>
             </section>
         </div>
@@ -52,7 +51,7 @@
                 <ul>
                     <li>Обращение к несуществующей переменной</li>
                     <li>Вызов несуществующего метода</li>
-                    <li>Неправильное использование метода eval()</li>
+                    <li>Неправильное использование метода eval( )</li>
                     <li>Методу decodeURI передан неверный uri</li>
                 </ul>
             </section>
@@ -100,7 +99,7 @@
                     <code>    var months=new Array("январь", .., "декабрь");</code>
                     <code>    if (months[month - 1] != null)</code>
                     <code>        return months[month];</code>
-                    <code>    else</code>
+                    <code>    else {</code>
                     <code>        throw new Error("Неверный месяц");</code>
                     <code>    }</code>
                     <code>}</code>
@@ -112,7 +111,7 @@
         <div>
             <section>
                 <header>
-                    <h2>Создание объекта Error</h2>
+                    <h2>Обработка созданного исключения</h2>
                 </header>
                 <pre>
                     <code>try {</code>
@@ -161,8 +160,8 @@
                     <h2>Свойства объекта Function</h2>
                 </header>
                 <ul>
-                    <li>arguments - массив аргументов, переданных функции</li>
-                    <li>length - число формальных аргументов функции</li>
+                    <li>arguments — массив аргументов, переданных функции</li>
+                    <li>length — число формальных аргументов функции</li>
                 </ul>
                 <p><a href="http://jsfiddle.net/h404/s4a3g/" target="_blank">Пример</a></p>
             </section>
@@ -179,7 +178,6 @@
                     <li>call( )</li>
                     <li>toString( )</li>
                 </ul>
-                <p><a href="http://jsfiddle.net/h404/jVkmy/" target="_blank">Пример</a></p>
             </section>
         </div>
     </div>
@@ -209,7 +207,7 @@
                     <h2>Глобальный объект</h2>
                 </header>
                 <ul>
-                    <li>В браузере – объект window</li>
+                    <li>В браузере — объект window</li>
                     <li>Можно вызывать методы и свойства глобального объекта не указывая на него</li>
                 </ul>
                 <pre>
@@ -247,6 +245,7 @@
                     <li>navigator</li>
                     <li>screen</li>
                     <li>status</li>
+                    <li>и ещё порядка 20 свойств</li>
                 </ul>
             </section>
         </div>
@@ -264,6 +263,7 @@
                     <li>focus( )</li>
                     <li>print( )</li>
                     <li>open( )</li>
+                    <li>и ещё порядка 20 методов</li>
                 </ul>
             </section>
         </div>
@@ -287,11 +287,12 @@
                 </header>
                 <pre>
                     <code>function newWindow(h, w) {</code>
-                    <code>    var params, myWindow;</code>
-                    <code>    if (h) {params[] = 'height=' + h;}</code>
-                    <code>    if (w) {params[] = 'width=' + w;}</code>
+                    <code>    var params = [], myWindow;</code>
+                    <code>    if (h) {params.push('height=' + h);}</code>
+                    <code>    if (w) {params.push('width=' + w);}</code>
                     <code>    myWindow = window.open("","",params.toString());</code>
                     <code>    myWindow.focus();</code>
+                    <code>    <mark>return myWindow</mark>;</code>
                     <code>}</code>
                 </pre>
             </section>
@@ -483,10 +484,10 @@
                 <pre>
                     <code>&lt;a href="http://google.com/">Искать в Гугле&lt;/a></code>
                     <code>&lt;a href="http://google.com/" </code>
-                    <code>    onclick="doSomething(); void 0;">Искать в Гугле&lt;/a></code>
+                    <code>    onclick="doSomething(); <mark>void 0</mark>;">Искать в Гугле&lt;/a></code>
                     <code>&lt;a href="http://google.com/" </code>
                     <code>    onclick="doSomething(); </code>
-                    <code>    return false;">Искать в Гугле&lt;/a></code>
+                    <code>    <mark>return false</mark>;">Искать в Гугле&lt;/a></code>
                 </pre>
             </section>
         </div>
@@ -524,10 +525,10 @@
         <div>
             <section>
                 <header>
-                    <h2>Обработчик событий</h2>
+                    <h2>Недостатки обработчиков</h2>
                 </header>
                 <ul>
-                    <li>html-атрибут — избыточный и грязный код</li>
+                    <li>html-атрибут — избыточный и «грязный» код</li>
                     <li>dom-атрибут — нельзя задать несколько функций обработчиков</li>
                 </ul>
             </section>
@@ -545,7 +546,7 @@
                     <li>Работает в IE &lt; 9</li>
                 </ul>
                 <pre>
-                    <code>element.attachEvent( "on"+event, handler);</code>
+                    <code>element.attachEvent("on"+event, handler);</code>
                 </pre>
             </section>
         </div>
@@ -561,9 +562,9 @@
                     <code>function handler() {</code>
                     <code>    // JS Code</code>
                     <code>}</code>
-                    <code>input.attachEvent( "onclick" , handler);</code>
+                    <code>input.attachEvent("onclick" , handler);</code>
                     <code>// Удаление обработчика</code>
-                    <code>input.detachEvent( "onclick", handler);</code>
+                    <code>input.detachEvent("onclick", handler);</code>
                 </pre>
             </section>
         </div>
@@ -580,7 +581,7 @@
                     <li>«Стандартный» метод обработки событий</li>
                 </ul>
                 <pre>
-                    <code>element.addEventListener( event, handler, phase);</code>
+                    <code>element.addEventListener(event, handler, phase);</code>
                 </pre>
             </section>
         </div>
@@ -596,9 +597,9 @@
                     <code>function handler() {</code>
                     <code>    // JS Code</code>
                     <code>}</code>
-                    <code>input.addEventListener( "click" , handler, false);</code>
+                    <code>input.addEventListener("click" , handler, false);</code>
                     <code>// Удаление обработчика</code>
-                    <code>input.removeEventListener( "click", handler, false);</code>
+                    <code>input.removeEventListener("click", handler, false);</code>
                 </pre>
             </section>
         </div>
