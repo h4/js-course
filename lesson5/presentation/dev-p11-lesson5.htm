@@ -181,7 +181,7 @@
                 <header>
                     <h2>Объект Navigator</h2>
                 </header>
-                <p>Информация о характеристиках экрана пользователя</p>
+                <p>Информация о характеристиках браузера пользователя</p>
             </section>
         </div>
     </div>
@@ -215,7 +215,7 @@
                 <pre>
                     <code>document.images</code>
                     <code>document.getElementById()</code>
-                    <code></code>document.getElementsByTagName()
+                    <code>document.getElementsByTagName('img')</code>
                 </pre>
             </section>
         </div>
@@ -280,7 +280,7 @@
             el = document.getElementById('show-location');
             el.innerHTML = location;
         }
-        
+
         function showProps(objStr) {
             var obj = eval(objStr),
                 el = document.getElementById(objStr + '-props');
