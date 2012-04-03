@@ -280,34 +280,21 @@
             el = document.getElementById('show-location');
             el.innerHTML = location;
         }
-        function showLocationProps() {
-            el = document.getElementById('location-props');
-            for (prop in location) {
-                if (typeof(location[prop]) !== 'function') {
-                    el.innerHTML += '<code>' + prop + ': <mark>' + location[prop] + '</mark></code>\n';
+        
+        function showProps(objStr) {
+            var obj = eval(objStr),
+                el = document.getElementById(objStr + '-props');
+            for (prop in obj) {
+                if (typeof(obj[prop]) !== 'function') {
+                    el.innerHTML += '<code>' + prop + ': <mark>' + obj[prop] + '</mark></code>\n';
                 }
             }
         }
-        function showScreenProps() {
-            el = document.getElementById('screen-props');
-            for (prop in screen) {
-                if (typeof(screen[prop]) !== 'function') {
-                    el.innerHTML += '<code>' + prop + ': <mark>' + screen[prop] + '</mark></code>\n';
-                }
-            }
-        }
-        function showNavigatorProps() {
-            el = document.getElementById('navigator-props');
-            for (prop in navigator) {
-                if (typeof(navigator[prop]) !== 'function') {
-                    el.innerHTML += '<code>' + prop + ': <mark>' + navigator[prop] + '</mark></code>\n';
-                }
-            }
-        }
+        
         window.addEventListener('load', showLocation)
-        window.addEventListener('load', showLocationProps)
-        window.addEventListener('load', showScreenProps)
-        window.addEventListener('load', showNavigatorProps)
+        window.addEventListener('load', function(){showProps('location');})
+        window.addEventListener('load', function(){showProps('screen');})
+        window.addEventListener('load', function(){showProps('navigator');})
     </script>
     <!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
 </body>
