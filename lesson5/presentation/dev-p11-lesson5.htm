@@ -16,15 +16,14 @@
 <body class="list">
     <header class="caption">
         <h1>Занятие 5</h1>
-        <p>Свойства объекта window</p>
+        <p>Свойства объекта window. Объект Image</p>
     </header>
-    <div class="slide bg" id="Cover"><div>
+    <div class="slide cover" id="Cover"><div>
         <section>
             <header>
                 <h2>Свойства объекта window</h2>
             </header>
-            <img src="../../../shower/pictures/cover.jpg" alt="">
-            <!-- © John Carey, http://fiftyfootshadows.net/ -->
+            <img src="../../img/cover.jpg" alt="">
         </section>
     </div></div>
     <div class="slide" id="slide1">
@@ -34,14 +33,12 @@
                     <h2>Объект Window</h2>
                 </header>
                 <p>Даёт доступ к окну браузера. Обладает следующими свойствами:</p>
-                <ul>
-                    <li>document</li>
-                    <li>history</li>
-                    <li>location</li>
-                    <li>navigator</li>
-                    <li>screen</li>
-                    <li>status</li>
-                </ul>
+                <pre>
+                    <code>for (prop in window) {</code>
+                    <code>    if (typeof window[prop] !== 'function') {</code>
+                    <code>        console.log(prop);</code>
+                    <code>    }</code>
+                    <code>}</code>
             </section>
         </div>
     </div>
@@ -63,50 +60,6 @@
         <div>
             <section>
                 <header>
-                    <h2>Цепочка свойств</h2>
-                </header>
-                <pre>
-                    <code>var d, i, i_src;</code>
-                    <code>d = window.document;</code>
-                    <code>i = document.images[0];</code>
-                    <code>i_src = i.src;</code>
-                </pre>
-                <pre>
-                    <code>var i_src = window.document.images[0].src;</code>
-                </pre>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide4">
-        <div>
-            <section>
-                <header>
-                    <h2>Доступ к элементу страницы</h2>
-                </header>
-                <pre><code>document.getElementById(<mark>id</mark>)</code></pre>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide5">
-        <div>
-            <section>
-                <header>
-                    <h2>Коллекции (массивы)</h2>
-                </header>
-                <ul>
-                    <li>document.getElementsByTagName</li>
-                    <li>document.anchors</li>
-                    <li>document.forms</li>
-                    <li>document.images</li>
-                    <li>document.links</li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide6">
-        <div>
-            <section>
-                <header>
                     <h2>Свойства объекта window</h2>
                 </header>
                 <ul>
@@ -119,29 +72,180 @@
             </section>
         </div>
     </div>
-    <div class="slide" id="slide7">
+    <div class="slide" id="slide4">
         <div>
             <section>
                 <header>
-                    <h2>Объект Image</h2>
+                    <h2>Объект status</h2>
                 </header>
-                <ul>
-                    <li>Доступ к имеющимся изображениям</li>
-                    <li>Динамическое создание новых изображений</li>
-                </ul>
+                <p>Строка. Содержимое выводится в статусную строку браузера</p>
             </section>
         </div>
     </div>
-    <div class="slide shout" id="slide8">
+    <div class="slide" id="slide5">
         <div>
             <section>
                 <header>
-                    <h2>Картинка — свойство Image</h2>
+                    <h2>Объект Location</h2>
                 </header>
+                <p>Содержимое адресной строки браузера — адрес страницы, открытой в браузере</p>
+                <pre>
+                    <code id="show-location"></code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide6">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства объекта Location</h2>
+                </header>
+                <pre id="location-props">
+                    
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide cover" id="slide7">
+        <div>
+            <section>
+                <img src="i/gmail.png" alt="">
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide8">
+        <div>
+            <section>
+                <header>
+                    <h2>Методы объекта Location</h2>
+                </header>
+                <pre>
+                    <code>assign()</code>
+                    <code>reload()</code>
+                    <code>replace()</code>
+                </pre>
             </section>
         </div>
     </div>
     <div class="slide" id="slide9">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект History</h2>
+                </header>
+                <p>Доступ к истории посещений во вкладке</p>
+                <p><code>history.length</code> — число элементов истории</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide10">
+        <div>
+            <section>
+                <header>
+                    <h2>Методы объекта History</h2>
+                </header>
+                <pre>
+                    <code>back()</code>
+                    <code>forward()</code>
+                    <code>go()</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide11">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект Screen</h2>
+                </header>
+                <p>Информация о характеристиках экрана пользователя</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide12">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства объекта Screen</h2>
+                </header>
+                <pre id="screen-props">
+                    
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide13">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект Navigator</h2>
+                </header>
+                <p>Информация о характеристиках экрана пользователя</p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide14">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства объекта Navigator</h2>
+                </header>
+                <pre id="navigator-props" style="font-size: 0.8em">
+                    
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide shout" id="slide15">
+        <div>
+            <section>
+                <header>
+                    <h2>Изображения — объект Image</h2>
+                </header>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide16">
+        <div>
+            <section>
+                <header>
+                    <h2>Доступ к существующим изображениям</h2>
+                </header>
+                <pre>
+                    <code>document.images</code>
+                    <code>document.getElementById()</code>
+                    <code></code>document.getElementsByTagName()
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide17">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойства объекта Image</h2>
+                </header>
+                <p>Аналогичны html-атрибутам</p>
+            </section>
+        </div>
+    </div>
+
+    <div class="slide" id="slide18">
+        <div>
+            <section>
+                <header>
+                    <h2>События объекта Image</h2>
+                </header>
+                <pre>
+                    <code>onabort</code>
+                    <code>onerror</code>
+                    <code>onload</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide19">
         <div>
             <section>
                 <header>
@@ -154,56 +258,57 @@
             </section>
         </div>
     </div>
+    <div class="slide" id="slide20">
+        <div>
+            <section>
+                <header>
+                    <h2>Динамическое создание изображения</h2>
+                </header>
+                <ol>
+                    <li>Создать новый экземпляр</li>
+                    <li>Указать значения свойств</li>
+                    <li>Вставить в DOM-дерево</li>
+                </ol>
+            </section>
+        </div>
+    </div>
 
-
-    <!--
-        Эта возможность находится в разработке!
-
-        Добавьте класс «inner» к любому родительскому
-        элементу для того, чтобы обозначить блок
-        внутренней навигации. Нажатие кнопки «следующий»
-        добавит класс «active» каждому последующему
-        ребёнку, начиная с первого.
-
-        Конкретное поведение зависит от стилей
-        текущей темы: элемент в активном состоянии
-        может быть показан, будучи предварительно спрятан,
-        либо вы можете выделить его, к примеру, цветом
-        или полужирным начертанием.
-
-        Для того, чтобы начать слайд с первого активного
-        элемента, добавьте класс «active» вручную.
-
-        После активации последнего элемента, нажатие
-        кнопки «следующий» переключит следующий слайд.
-
-    <div class="slide" id="InnerNavigation"><div>
-        <section>
-            <header>
-                <h2>Внутренняя навигация</h2>
-            </header>
-            <ol class="inner">
-                <li class="active">This tool is provided</li>
-                <li>Without warranty, guarantee</li>
-                <li>Or much in the way of explanation
-                <li>Erase your hard drive.</li>
-            </ol>
-        </section>
-    </div></div> -->
-    <!--
-        Для того, чтобы убрать индикатор прогресса
-        из презентации, просто удалите элемент «progress».
-        -->
     <div class="progress"><div></div></div>
     <script src="../../../shower/scripts/script.js"></script>
-    <script type="text/javascript">(function() {
-        el = document.getElementById("slideDate");
-        function writeCurDate() {
-            var dtA = new Date();
-            el.innerHTML = dtA;
+    <script type="text/javascript">
+        function showLocation() {
+            el = document.getElementById('show-location');
+            el.innerHTML = location;
         }
-        setInterval(writeCurDate, 1000);
-    })();</script>
+        function showLocationProps() {
+            el = document.getElementById('location-props');
+            for (prop in location) {
+                if (typeof(location[prop]) !== 'function') {
+                    el.innerHTML += '<code>' + prop + ': <mark>' + location[prop] + '</mark></code>\n';
+                }
+            }
+        }
+        function showScreenProps() {
+            el = document.getElementById('screen-props');
+            for (prop in screen) {
+                if (typeof(screen[prop]) !== 'function') {
+                    el.innerHTML += '<code>' + prop + ': <mark>' + screen[prop] + '</mark></code>\n';
+                }
+            }
+        }
+        function showNavigatorProps() {
+            el = document.getElementById('navigator-props');
+            for (prop in navigator) {
+                if (typeof(navigator[prop]) !== 'function') {
+                    el.innerHTML += '<code>' + prop + ': <mark>' + navigator[prop] + '</mark></code>\n';
+                }
+            }
+        }
+        window.addEventListener('load', showLocation)
+        window.addEventListener('load', showLocationProps)
+        window.addEventListener('load', showScreenProps)
+        window.addEventListener('load', showNavigatorProps)
+    </script>
     <!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
 </body>
 </html>
