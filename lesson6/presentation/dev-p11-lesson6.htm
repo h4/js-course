@@ -16,26 +16,34 @@
 <body class="list">
     <header class="caption">
         <h1>Занятие 6</h1>
-        <p>Работа со стилевыми правилами</p>
+        <p>Работа со стилевыми правилами. Таблицы</p>
     </header>
-    <div class="slide bg" id="Cover"><div>
-        <section>
-            <header>
-                <h2>Объект style</h2>
-            </header>
-            <img src="../../../shower/pictures/cover.jpg" alt="">
-            <!-- © John Carey, http://fiftyfootshadows.net/ -->
-        </section>
-    </div></div>
+    <div class="slide cover" id="Cover">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект Style. Объект Table</h2>
+                </header>
+                <img src="../../img/cover.jpg" alt="">
+            </section>
+        </div>
+    </div>
+
     <div class="slide" id="slide1">
         <div>
             <section>
                 <header>
-                    <h2>Объект style</h2>
+                    <h2>CSS</h2>
                 </header>
-                <p>Даёт доступ к изменению визуального отображения элемента</p>
+                <p>Способы задать свойства элементу:</p>
                 <ul>
-                    <li>document.getElementById("el1").<code>style</code>.background="#EEE";</li>
+                    <li>Атрибут <code>style</code></li>
+                    <li>Атрибут <code>class</code> и таблица стилей
+                        <ul>
+                            <li>Встроенная таблица стрилей (style)</li>
+                            <li>Подключаемая таблица стилей (link)</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
         </div>
@@ -44,13 +52,27 @@
         <div>
             <section>
                 <header>
-                    <h2>Изменение свойств элемента</h2>
+                    <h2>CSS + JavaScript</h2>
                 </header>
                 <ul>
-                    <li>Изменение свойств объекта style</li>
+                    <li>Изменение свойств свойтва (объекта) style</li>
                     <li>Изменение класса элемента</li>
                     <li>Подключение дополнительной таблицы стилей</li>
                 </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide1">
+        <div>
+            <section>
+                <header>
+                    <h2>Объект Style</h2>
+                </header>
+                <p>Позволяет изменить css-свйоства элемента</p>
+                <pre>
+                    <code>document.getElementById("el1").<mark>style</mark>.background="#EEE";</code>
+                    <code>document.getElementById("el1").style.color=<mark>""</mark>;</code>
+                </pre>
             </section>
         </div>
     </div>
@@ -58,34 +80,22 @@
         <div>
             <section>
                 <header>
-                    <h2>Изменение стиля элемента</h2>
+                    <h2>Изменение css-свойства элемента</h2>
                 </header>
                 <ol>
                     <li>Найти нужный элемент
-                        <ol>
+                        <ul>
                             <li>document.getElementById</li>
-                            <li>document.getElementsByTagName(<code>t</code>)[<code>num</code>]</li>
+                            <li>document.getElementsByTagName(<code>tagname</code>)[<code>index</code>]</li>
                             <li>document.body</li>
-                        </ol>
+                        </ul>
                     </li>
-                    <li>Обратиться к объекту-свойству <code>style</code></li>
+                    <li>Обратиться к свойству <code>style</code></li>
                     <li>Обратиться к нужному свойству объекта style</li>
                     <li>Изменить значение свойства</li>
                 </ol>
             </section>
         </div>
-    </div>
-    <div class="slide" id="slide4">
-        <div><section>
-            <header>
-                <h2>Особенности свойств объекта style</h2>
-            </header>
-            <ul>
-                <li>Тип свойста — строка</li>
-                <li>background-color => backgroundColor</li>
-                <li>Возвращает значение, указанное в <code>атрибуте</code> style</li>
-            </ul>
-        </section></div>
     </div>
     <div class="slide shout" id="slide5">
         <div>
@@ -96,58 +106,115 @@
             </section>
         </div>
     </div>
+    <div class="slide" id="slide4">
+        <div><section>
+            <header>
+                <h2>Особенности свойств объекта style</h2>
+            </header>
+            <ul>
+                <li>Тип свойства — строка</li>
+                <li>Отображает результат, а не само свойство</li>
+                <li>background-color → backgroundColor</li>
+                <li>Возвращает значение, указанное в <code>атрибуте</code> style</li>
+            </ul>
+        </section></div>
+    </div>
+    <div class="slide" id="slide6">
+        <div>
+            <section>
+                <header>
+                    <h2>Отображение свойств</h2>
+                </header>
+                <pre>
+                    <code>&lt;p id="new">AJAX&lt;/p></code>
+                    <code>elStyle = document.getElementById('new').style;</code>
+                    <code>elStyle.color = "#F00";</code>
+                    <code>console.log(elStyle.color);</code>
+                    <code>// "<mark>rgb(255, 0, 0)</mark>"</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide6">
+        <div>
+            <section>
+                <header>
+                    <h2>Наследование свойств</h2>
+                </header>
+                <pre>
+                    <code>p {font-size: 1.2em;}</code>
+                    <code>&lt;p id="new">AJAX&lt;/p></code>
+                    <code>el = document.getElementById('new');</code>
+                    <code>console.log(el.style.fontSize);</code>
+                    <code>// <mark>""</mark></code>
+                </pre>
+            </section>
+        </div>
+    </div>
     <div class="slide" id="slide6">
         <div>
             <section>
                 <header>
                     <h2>Реальное (вычисленное) значение свойства</h2>
                 </header>
-                <pre><code>p {font-size: 1.2em;}</code></pre>
-                <ul>
-                    <li>elem.currentStyle.fontSize</li>
-                    <li>window.getComputedStyle(elem, null).fontSize</li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide7">
-        <div>
-            <section>
-                <header>
-                    <h2>Недостатки el.style</h2>
-                </header>
-                <ul>
-                    <li>Много рутинной работы</li>
-                    <li>Вынесение свойств css в js-код</li>
-                    <li>Производительность</li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="slide" id="slide8">
-        <div>
-            <section>
-                <header>
-                    <h2>Изменение имени класса</h2>
-                </header>
-                <p>Если нужно одновременно измненить несколько свойств</p>
                 <pre>
-                    <code>var el = document.getElementById("elID");</code>
-                    <code>el.className = "newClassName";</code>
+                    <code>p {font-size: 1.2em;}</code>
+                </pre>
+                <ul>
+                    <li>window.getComputedStyle(elem, null).fontSize</li>
+                    <li>elem.getComputedStyle.fontSize //IE &lt; 9</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide4">
+        <div>
+            <section>
+                <header>
+                    <h2>Особенности getComputedStyle | getComputedStyle</h2>
+                </header>
+                <ul>
+                    <li>Доступно только для чтения</li>
+                    <li>Отображает результат вычислений</li>
+                    <li>В Firefox пиксели могут быть дробными</li>
+                    <li>Свойство currentStyle сохраняет единицы измерения</li>
+                    <li>background-color → backgroundColor</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide6">
+        <div>
+            <section>
+                <header>
+                    <h2>Кроссбраузерный способ</h2>
+                </header>
+                <pre>
+                    <code>function computedStyle(el) {</code>
+                    <code>    if (window.getComputedStyle) {</code>
+                    <code>        return getComputedStyle(elem, null);</code>
+                    <code>    } else {</code>
+                    <code>        return = elem.currentStyle;</code>
+                    <code>    }</code>
+                    <code>}</code>
                 </pre>
             </section>
         </div>
     </div>
-    <div class="slide" id="slide9">
+    <div class="slide" id="slide6">
         <div>
             <section>
                 <header>
-                    <h2>Таблицы стилей</h2>
+                    <h2>style.cssText</h2>
                 </header>
-                <ul>
-                    <li>Переключение свойства <code>disabled</code> элементов <em>link</em> и <em>style</em></li>
-                    <li>Коллекция document.styleSheet</li>
-                </ul>
+                <pre>
+                    <code>el.style.cssText="color: red !important; \</code>
+                    <code>    background-color: yellow; \</code>
+                    <code>    width: 100px; \</code>
+                    <code>    text-align: center; \</code>
+                    <code>    -ufo-diameter: 5; \</code>
+                    <code>    ";</code>
+                </pre>  
             </section>
         </div>
     </div>
@@ -159,10 +226,10 @@
                 </header>
                 <ul>
                     <li>Найти элемент</li>
-                    <li>Изменить его свойства</li>
                     <li>Событие начала анимации</li>
-                    <li>Событие завершения анимации</li>
                     <li>Таймер пошаговой анимации</li>
+                    <li>Алгоритм изменения свойств</li>
+                    <li>Событие завершения анимации</li>
                 </ul>
             </section>
         </div>
@@ -198,15 +265,101 @@
             </section>
         </div>
     </div>
+    <div class="slide" id="slide7">
+        <div>
+            <section>
+                <header>
+                    <h2>Недостатки el . style</h2>
+                </header>
+                <ul>
+                    <li>Много рутинной работы</li>
+                    <li>Вынесение свойств css в js-код</li>
+                    <li>Производительность</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide8">
+        <div>
+            <section>
+                <header>
+                    <h2>Изменение имени класса</h2>
+                </header>
+                <pre>
+                    <code>.new {color: red; background: yellow;}</code>
+                    <code>...</code>
+                    <code>var el = document.getElementById("elID");</code>
+                    <code>    el.className = "new";</code>
+                </pre>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide7">
+        <div>
+            <section>
+                <header>
+                    <h2>Свойство className</h2>
+                </header>
+                <ul>
+                    <li>Строка, разделённая пробелами</li>
+                    <li>Можно применять строковые методы</li>
+                    <li>Преобразование в массив</li>
+                </ul>
+                <p><a href="https://gist.github.com/2310793" target="_blank">Примеры служебных функций</a></p>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide7">
+        <div>
+            <section>
+                <header>
+                    <h2>Применение className</h2>
+                </header>
+                <ul>
+                    <li>Изменение состояния элемента</li>
+                    <li>Отображение / скрытие потомков</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide7">
+        <div>
+            <section>
+                <header>
+                    <h2>Темы оформления (скины)</h2>
+                </header>
+                <ul>
+                    <li>Структура документа не меняется</li>
+                    <li>Изменеются правила для классов</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="slide" id="slide9">
+        <div>
+            <section>
+                <header>
+                    <h2>Таблицы стилей</h2>
+                </header>
+                <ul>
+                    <li>Переключение свойства <code>disabled</code> элементов <em>link</em> и <em>style</em></li>
+                    <li>Коллекция document.styleSheets</li>
+                    <li>Добавление новых таблиц стилей через DOM-методы</li>
+                </ul>
+            </section>
+        </div>
+    </div>
     <div class="slide" id="slide13">
         <div>
             <section>
                 <header>
-                    <h2>Объект table</h2>
+                    <h2>Объект Table</h2>
                 </header>
                 <p>Предоставляет доступ к управлению табличными данными</p>
 
-                <p>Используется для визуализации больших объёмов данных (от сервера)</p>
+                <p>Используется для динамической визуализации больших объёмов данных</p>
+
+                <p><a href="http://jsfiddle.net/h404/vqp9N/" target="_blank">Пример</a></p>
             </section>
         </div>
     </div>
@@ -240,54 +393,22 @@
         </div>
     </div>
     <div class="slide" id="slide16">
-        <section>
-            <header>
-                <h2>Заполнение таблицы данными</h2>
-            </header>
-            <ol>
-                <li>Выбрать элемент-таблицу</li>
-                <li>Создать строку</li>
-                <li>Создать ячейку</li>
-                <li>Заполнить ячейку данными</li>
-                <li>Повторить пункты 2-4</li>
-            </ol>
-        </section>
+        <div>
+            <section>
+                <header>
+                    <h2>Заполнение таблицы данными</h2>
+                </header>
+                <ol>
+                    <li>Выбрать элемент-таблицу</li>
+                    <li>Создать строку</li>
+                    <li>Создать ячейку</li>
+                    <li>Заполнить ячейку данными</li>
+                    <li>Повторить пункты 2-4</li>
+                </ol>
+            </section>
+        </div>
     </div>
 
-    <!--
-        Эта возможность находится в разработке!
-
-        Добавьте класс «inner» к любому родительскому
-        элементу для того, чтобы обозначить блок
-        внутренней навигации. Нажатие кнопки «следующий»
-        добавит класс «active» каждому последующему
-        ребёнку, начиная с первого.
-
-        Конкретное поведение зависит от стилей
-        текущей темы: элемент в активном состоянии
-        может быть показан, будучи предварительно спрятан,
-        либо вы можете выделить его, к примеру, цветом
-        или полужирным начертанием.
-
-        Для того, чтобы начать слайд с первого активного
-        элемента, добавьте класс «active» вручную.
-
-        После активации последнего элемента, нажатие
-        кнопки «следующий» переключит следующий слайд.
-
-    <div class="slide" id="InnerNavigation"><div>
-        <section>
-            <header>
-                <h2>Внутренняя навигация</h2>
-            </header>
-            <ol class="inner">
-                <li class="active">This tool is provided</li>
-                <li>Without warranty, guarantee</li>
-                <li>Or much in the way of explanation
-                <li>Erase your hard drive.</li>
-            </ol>
-        </section>
-    </div></div> -->
     <!--
         Для того, чтобы убрать индикатор прогресса
         из презентации, просто удалите элемент «progress».
@@ -295,12 +416,7 @@
     <div class="progress"><div></div></div>
     <script src="../../../shower/scripts/script.js"></script>
     <script type="text/javascript">(function() {
-        el = document.getElementById("slideDate");
-        function writeCurDate() {
-            var dtA = new Date();
-            el.innerHTML = dtA;
-        }
-        setInterval(writeCurDate, 1000);
+        
     })();</script>
     <!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
 </body>
