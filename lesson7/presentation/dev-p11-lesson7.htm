@@ -23,18 +23,17 @@
 
     <p>Формы. Фреймы. Cookies</p>
 </header>
-<div class="slide bg" id="Cover">
+<div class="slide cover" id="Cover">
     <div>
         <section>
             <header>
                 <h2>Формы. Фреймы. Cookies</h2>
             </header>
-            <img src="../../../shower/pictures/cover.jpg" alt="">
-            <!-- © John Carey, http://fiftyfootshadows.net/ -->
+            <img src="../../img/cover.jpg" alt="">
         </section>
     </div>
 </div>
-<div class="slide" id="slide20">
+<div class="slide" id="slide1">
     <div>
         <section>
             <header>
@@ -48,22 +47,47 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide21">
+<div class="slide" id="slide2">
     <div>
         <section>
             <header>
                 <h2>Доступ к фрейму</h2>
             </header>
-            <ul>
-                <li>var win = window</li>
-                <li>var frame_0 = window.frames[0]</li>
-                <li>frame_0 — window</li>
-                <li>win == frame_0.parent</li>
-            </ul>
+            <pre>
+                <code>var win = window</code>
+                <code>    frame_0 = window.frames[0]</code>
+                <code>win === frame_0.parent</code>
+            </pre>
         </section>
     </div>
 </div>
-<div class="slide" id="slide22">
+<div class="slide" id="slide3">
+    <div>
+        <section>
+            <header>
+                <h2>Перезагрузка содержимого фрейма</h2>
+            </header>
+            <pre>
+                <code>var frame = window.frames[0];</code>
+                <code>frame.src = "http://www.avalon.ru/";</code>
+            </pre>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide4">
+    <div>
+        <section>
+            <header>
+                <h2>Ограничения использования</h2>
+            </header>
+            <ol>
+                <li>Безопасность</li>
+                <li>Не изменяется location</li>
+            </ol>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide5">
     <div>
         <section>
             <header>
@@ -72,12 +96,28 @@
             <p>Хранение данных в браузере</p>
             <ul>
                 <li>document.cookie</li>
-                <li>Строка ключ=значение</li>
+                <li>Похоже на строку, но строкой не является</li>
             </ul>
         </section>
     </div>
 </div>
-<div class="slide" id="slide23">
+<div class="slide" id="slide6">
+    <div>
+        <section>
+            <header>
+                <h2>Свойства Cookie</h2>
+            </header>
+            <ul>
+                <li>NAME=VALUE</li>
+                <li>expires=DATE</li>
+                <li>domain=DOMAIN_NAME</li>
+                <li>path=PATH</li>
+                <li>secure</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide7">
     <div>
         <section>
             <header>
@@ -92,7 +132,7 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide1">
+<div class="slide" id="slide8">
     <div>
         <section>
             <header>
@@ -107,57 +147,88 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide2">
+<div class="slide" id="slide9">
     <div>
         <section>
             <header>
                 <h2>Работа с формами</h2>
             </header>
             <ul>
-                <li>Объект формы
-                    <ul>
-                        <li>Свойства объекта</li>
-                        <li>Методы объекта</li>
-                        <li>Обработчики событий</li>
-                    </ul>
-                </li>
-                <li>Объекты элементов формы
-                    <ul>
-                        <li>Свойства объекта</li>
-                        <li>Методы объекта</li>
-                        <li>Обработчики событий</li>
-                    </ul>
-                </li>
+                <li>Объект формы</li>
+                <li>Объекты элементов формы</li>
             </ul>
         </section>
     </div>
 </div>
-<div class="slide" id="slide3">
+<div class="slide" id="slide10">
     <div>
-        <section><header>
-            <h2>Получение объекта формы</h2>
-        </header>
-        <ul>
-            <li>document.forms[]</li>
-            <li>document.<code>NAME</code></li>
-            <li>document.getElementById()</li>
-        </ul></section>
+        <section>
+            <header>
+                <h2>Объект формы</h2>
+            </header>
+            <ul>
+                <li>Свойства объекта</li>
+                <li>Методы объекта</li>
+                <li>Обработчики событий</li>
+            </ul>
+        </section>
     </div>
 </div>
-<div class="slide" id="slide4">
+<div class="slide" id="slide11">
+    <div>
+        <section>
+            <header>
+                <h2>Объекты элементов формы</h2>
+            </header>
+            <ul>
+                <li>Свойства объекта</li>
+                <li>Методы объекта</li>
+                <li>Обработчики событий</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide12">
+    <div>
+        <section>
+            <header>
+                <h2>Получение объекта формы</h2>
+            </header>
+            <pre>
+                <code>document.forms[]</code>
+                <code>document.<mark>NAME</mark></code>
+                <code>document.getElementById()</code>
+            </pre>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide13">
     <div>
         <section>
             <header>
                 <h2>Методы формы</h2>
             </header>
             <ul>
-                <li>submit()</li>
-                <li>reset()</li>
+                <li>submit( )</li>
+                <li>reset( )</li>
             </ul>
         </section>
     </div>
 </div>
-<div class="slide" id="slide5">
+<div class="slide" id="slide14">
+    <div>
+        <section>
+            <header>
+                <h2>События формы</h2>
+            </header>
+            <ul>
+                <li>onsubmit</li>
+                <li>onreset</li>
+            </ul>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide15">
     <div>
         <section>
             <header>
@@ -174,7 +245,7 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide6">
+<div class="slide" id="slide16">
     <div>
         <section>
             <header>
@@ -186,49 +257,45 @@
                 <li>HEAD</li>
                 <li><code>POST</code></li>
                 <li>PUT</li>
-                <li>PATCH</li>
-                <li>DELETE</li>
-                <li>TRACE</li>
-                <li>LINK</li>
-                <li>UNLINK</li>
+                <li>...</li>
                 <li>CONNECT</li>
             </ul>
         </section>
     </div>
 </div>
-<div class="slide" id="slide7">
+<div class="slide" id="slide17">
     <div>
         <section>
             <header>
                 <h2>Метод GET</h2>
             </header>
             <p>Передача данных как часть URL. Предназначен для запроса данных</p>
-                    <ul>
-                        <li>Данные открыты</li>
-                        <li>Ограничение по объему данных</li>
-                        <li>Проще тестировать</li>
-                        <li>Можно использовать без сервера</li>
-                    </ul>
+            <ul>
+                <li>Данные открыты</li>
+                <li>Ограничение по объему данных (500-2000 символов)</li>
+                <li>Проще тестировать</li>
+                <li>Можно использовать без сервера</li>
+            </ul>
         </section>
     </div>
 </div>
-<div class="slide" id="slide8">
+<div class="slide" id="slide18">
     <div>
         <section>
             <header>
                 <h2>Метод POST</h2>
             </header>
             <p>Передача данных серверу отдельным потоком. Продназначен для передачи данных</p>
-                    <ul>
-                        <li>Данные скрыты от пользователя</li>
-                        <li>Практически нет отграчничения по объему данных</li>
-                        <li>Требуется наличие сервера</li>
-                        <li>Запрос подтверждения повторной отправки</li>
-                    </ul>
+            <ul>
+                <li>Данные скрыты от пользователя</li>
+                <li>Практически нет отграчничения по объему данных</li>
+                <li>Требуется наличие сервера</li>
+                <li>Запрос подтверждения повторной отправки</li>
+            </ul>
         </section>
     </div>
 </div>
-<div class="slide" id="slide9">
+<div class="slide" id="slide19">
     <div>
         <section>
             <header>
@@ -236,16 +303,16 @@
             </header>
             <ul>
                 <li>application/x-www-form-urlencoded
-                <p>Вместо пробелов ставится +, символы вроде русских букв кодируются их шестнадцатеричными значениями (например, %D0%90%D0%BD%D1%8F вместо Аня).</p></li>
+                <p class="note">Вместо пробелов ставится +, символы вроде русских букв кодируются их шестнадцатеричными значениями (например, %D0%90%D0%BD%D1%8F вместо Аня).</p></li>
                 <li>multipart/form-data
-                <p>Данные не кодируются. Это значение применяется при отправке файлов.</p></li>
+                <p class="note">Данные не кодируются. Это значение применяется при отправке файлов.</p></li>
                 <li>text/plain
-                <p>Пробелы заменяются знаком +, буквы и другие символы не кодируются.</p></li>
+                <p class="note">Пробелы заменяются знаком +, буквы и другие символы не кодируются.</p></li>
             </ul>
         </section>
     </div>
 </div>
-<div class="slide" id="slide10">
+<div class="slide" id="slide20">
     <div>
         <section>
             <header>
@@ -264,7 +331,7 @@
     </div>
 </div>
 
-<div class="slide" id="slide11">
+<div class="slide" id="slide21">
     <div>
         <section>
             <header>
@@ -281,7 +348,7 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide12">
+<div class="slide" id="slide22">
     <div>
         <section>
             <header>
@@ -297,7 +364,7 @@
         </section>
     </div>
 </div>
-<div class="slide shout" id="slide13">
+<div class="slide shout" id="slide23">
     <div>
         <section>
             <header>
@@ -306,11 +373,11 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide14">
+<div class="slide" id="slide24">
     <div>
         <section>
             <header>
-                <h2>Общие события элентов формы</h2>
+                <h2>Общие события элементов формы</h2>
             </header>
             <ul>
                 <li>onfocus</li>
@@ -322,7 +389,7 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide15">
+<div class="slide" id="slide25">
     <div>
         <section>
             <header>
@@ -336,7 +403,7 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide16">
+<div class="slide" id="slide26">
     <div>
         <section>
             <header>
@@ -354,7 +421,7 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide17">
+<div class="slide" id="slide27">
     <div>
         <section>
             <header>
@@ -368,7 +435,7 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide18">
+<div class="slide" id="slide28">
     <div>
         <section>
             <header>
@@ -383,20 +450,56 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide19">
+<div class="slide" id="slide29">
     <div>
         <section>
             <header>
                 <h2>Проверка форм</h2>
             </header>
-            <ul>
-                <li>Событие onsubmit. Прерывание действия по умолчанию</li>
-                <li>Прочие события. Вызов метода submit()</li>
-            </ul>
+            <ol>
+                <li>Событие onsubmit</li>
+                <li>Прочие события</li>
+            </ol>
         </section>
     </div>
 </div>
-<div class="slide shout" id="slide19_1">
+<div class="slide" id="slide30">
+    <div>
+        <section>
+            <header>
+                <h2>Проверка форм</h2>
+            </header>
+            <pre>
+                <code>var f = forms[0];</code>
+                <code>f.onsibmit = validate;</code>
+                <code>function validate() {</code>
+                <code>    if (<mark>!valid</mark>) {</code>
+                <code>        return false;</code>
+                <code>    }</code>
+                <code>}</code>
+            </pre>
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide31">
+    <div>
+        <section>
+            <header>
+                <h2>Проверка форм</h2>
+            </header>
+            <pre>
+                <code>var f = document.getElementById('form-sender');</code>
+                <code>f.onclick = validate;</code>
+                <code>function validate() {</code>
+                <code>    if (<mark>valid</mark>) {</code>
+                <code>        forms[0].submit();</code>
+                <code>    }</code>
+                <code>}</code>
+            </pre>
+        </section>
+    </div>
+</div>
+<div class="slide shout" id="slide32">
     <div>
         <section>
             <header>
@@ -406,57 +509,12 @@
     </div>
 </div>
 
-
-<!--
-   Эта возможность находится в разработке!
-
-   Добавьте класс «inner» к любому родительскому
-   элементу для того, чтобы обозначить блок
-   внутренней навигации. Нажатие кнопки «следующий»
-   добавит класс «active» каждому последующему
-   ребёнку, начиная с первого.
-
-   Конкретное поведение зависит от стилей
-   текущей темы: элемент в активном состоянии
-   может быть показан, будучи предварительно спрятан,
-   либо вы можете выделить его, к примеру, цветом
-   или полужирным начертанием.
-
-   Для того, чтобы начать слайд с первого активного
-   элемента, добавьте класс «active» вручную.
-
-   После активации последнего элемента, нажатие
-   кнопки «следующий» переключит следующий слайд.
-
-<div class="slide" id="InnerNavigation"><div>
-   <section>
-       <header>
-           <h2>Внутренняя навигация</h2>
-       </header>
-       <ol class="inner">
-           <li class="active">This tool is provided</li>
-           <li>Without warranty, guarantee</li>
-           <li>Or much in the way of explanation
-           <li>Erase your hard drive.</li>
-       </ol>
-   </section>
-</div></div> -->
-<!--
-Для того, чтобы убрать индикатор прогресса
-из презентации, просто удалите элемент «progress».
--->
 <div class="progress">
     <div></div>
 </div>
 <script src="../../../shower/scripts/script.js"></script>
 <script type="text/javascript">(function() {
-    el = document.getElementById("slideDate");
-    function writeCurDate() {
-        var dtA = new Date();
-        el.innerHTML = dtA;
-    }
-
-    setInterval(writeCurDate, 1000);
+    
 })();</script>
 <!-- Copyright © 2010–2011 Вадим Макеев, http://pepelsbey.net/ -->
 </body>
