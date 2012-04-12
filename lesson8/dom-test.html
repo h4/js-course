@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестирование DOM</title>
+    <script type="text/javascript">
+    
+    function init () {
+        var buttons = document.getElementsByTagName('input');
+
+        buttons[0].onclick = test1;
+        buttons[1].onclick = test2;
+    }
+
+    window.onload = init;
+
+    function test1 () {
+        for (var i=0; i < 50000; i++) {
+            var el, 
+                text;
+            el = document.createElement("div");
+            text = document.createTextNode("Новый элемент");
+            el.appendChild(text);
+            document.body.appendChild(el);
+        }
+    }
+
+    function test2 () {
+        var dummy;
+        dummy = document.createElement("div");
+        for (var i=0; i < 50000; i++) {
+            var el, 
+                text;
+            el = document.createElement("div");
+            text = document.createTextNode("Новый элемент");
+            el.appendChild(text);
+            dummy.appendChild(el);
+        }
+        document.body.appendChild(dummy);
+    }
+
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Тест 1">
+    <input type="button" value="Тест 2">
+</body>
+</html>
