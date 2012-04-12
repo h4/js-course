@@ -23,13 +23,13 @@
 
     <p>DOM - объектная модель документа</p>
 </header>
-<div class="slide bg" id="Cover">
+<div class="slide cover" id="Cover">
     <div>
         <section>
             <header>
                 <h2>DOM - объектная модель документа</h2>
             </header>
-            <img src="../../../shower/pictures/cover.jpg" alt="">
+            <img src="../../img/cover.jpg" alt="">
             <!-- © John Carey, http://fiftyfootshadows.net/ -->
         </section>
     </div>
@@ -100,7 +100,7 @@
         </section>
     </div>
 </div>
-<div class="slide bg" id="slide5">
+<div class="slide cover w" id="slide5">
     <div>
         <section><img src="img/tree.png" alt=""></section>
     </div>
@@ -109,7 +109,7 @@
     <div>
         <section>
             <header>
-                <h2>node.nodeType</h2>
+                <h2>Node.NodeType</h2>
             </header>
             <p>Определяет тип узла. Всего 12 типов</p>
             <ul>
@@ -143,9 +143,9 @@
             </header>
             <p>Набор свойств и методов зависит от типа узла</p>
             <ul>
-                <li>NODE.nodeType</li>
-                <li>NODE.childNodes</li>
-                <li>NODE.attributes</li>
+                <li>Node.nodeType</li>
+                <li>Node.childNodes</li>
+                <li>Node.attributes</li>
             </ul>
         </section>
     </div>
@@ -156,7 +156,7 @@
             <header>
                 <h2>childNodes</h2>
             </header>
-            <p>Возвращает список узлов NodeList</p>
+            <p>Возвращает список узлов nodeList</p>
             <ul>
                 <li>Похоже на Array</li>
                 <li>Изменения в списке становятся доступны сразу</li>
@@ -198,13 +198,13 @@
                 <h2>Методы объекта Element</h2>
             </header>
             <ul>
-                <li>hasChildNodes()</li>
-                <li>appendChild()</li>
-                <li>removeChild()</li>
-                <li>replaceChild()</li>
-                <li>getAttribute()</li>
-                <li>getElementsByTagName()</li>
-                <li>item()</li>
+                <li>hasChildNodes( )</li>
+                <li>appendChild( )</li>
+                <li>removeChild( )</li>
+                <li>replaceChild( )</li>
+                <li>getAttribute( )</li>
+                <li>getElementsByTagName( )</li>
+                <li>item( )</li>
             </ul>
         </section>
     </div>
@@ -216,8 +216,8 @@
                 <h2>Создание новых узлов</h2>
             </header>
             <ul>
-                <li>document.createElement()</li>
-                <li>document.createTextNode()</li>
+                <li>document.createElement( )</li>
+                <li>document.createTextNode( )</li>
             </ul>
             <ul>
                 <li>ELEM.innerHTML</li>
@@ -259,13 +259,26 @@
     <div>
         <section>
             <header>
+                <h2>Изменение DOM-дерева</h2>
+            </header>
+            <p>Операция добавления элементов — очень ресурсоёмкая</p>
+            <p>Рекомендуется сначала подготовить фрагмент DOM, а потом вставить добавить его в документ</p>
+            <p><a href="../dom-test.html" target="_blank">Тестовый пример</a></p>
+            
+        </section>
+    </div>
+</div>
+<div class="slide" id="slide17">
+    <div>
+        <section>
+            <header>
                 <h2>Доступ к элементу</h2>
             </header>
             <ul>
                 <li>document.getElement<code>*</code></li>
                 <li>ELEM.firstChild</li>
                 <li>ELEM.lastChild</li>
-                <li>ELEM.childNodes()</li>
+                <li>ELEM.childNodes( )</li>
                 <li>ELEM.parentNode</li>
                 <li>ELEM.nextSibling</li>
                 <li>ELEM.previousSibling</li>
@@ -273,7 +286,7 @@
         </section>
     </div>
 </div>
-<div class="slide" id="slide17">
+<div class="slide" id="slide18">
     <div>
         <section>
             <header>
@@ -282,7 +295,7 @@
             <img class="middle" src="img/dom-childs.png" alt=""></section>
     </div>
 </div>
-<div class="slide" id="slide18">
+<div class="slide" id="slide19">
     <div>
         <section>
             <header>
@@ -293,45 +306,6 @@
 </div>
 
 
-
-<!--
-   Эта возможность находится в разработке!
-
-   Добавьте класс «inner» к любому родительскому
-   элементу для того, чтобы обозначить блок
-   внутренней навигации. Нажатие кнопки «следующий»
-   добавит класс «active» каждому последующему
-   ребёнку, начиная с первого.
-
-   Конкретное поведение зависит от стилей
-   текущей темы: элемент в активном состоянии
-   может быть показан, будучи предварительно спрятан,
-   либо вы можете выделить его, к примеру, цветом
-   или полужирным начертанием.
-
-   Для того, чтобы начать слайд с первого активного
-   элемента, добавьте класс «active» вручную.
-
-   После активации последнего элемента, нажатие
-   кнопки «следующий» переключит следующий слайд.
-
-<div class="slide" id="InnerNavigation"><div>
-   <section>
-       <header>
-           <h2>Внутренняя навигация</h2>
-       </header>
-       <ol class="inner">
-           <li class="active">This tool is provided</li>
-           <li>Without warranty, guarantee</li>
-           <li>Or much in the way of explanation
-           <li>Erase your hard drive.</li>
-       </ol>
-   </section>
-</div></div> -->
-<!--
-Для того, чтобы убрать индикатор прогресса
-из презентации, просто удалите элемент «progress».
--->
 <script src="../../../shower/scripts/script.js"></script>
 <div class="progress">
     <div></div>
